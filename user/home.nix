@@ -46,12 +46,12 @@
       alias brires='xrandr --output DisplayPort-0 --brightness 0.9 && xrandr --output HDMI-A-0 --brightness 0.9'
 
       #Bookmarks
-      alias storage='cd /run/media/thermal/Storage'
-      alias shows='cd /run/media/thermal/Storage/shows'
-      alias codes='cd /run/media/thermal/Storage/codes'
-      alias ccc='cd /run/media/thermal/Storage/ccc'
-      alias media='cd /run/media/thermal/Storage/multimedia'
-      alias workshop='cd /home/thermal/workshop/'
+      alias storage='cd /.../Storage'
+      alias shows='cd /.../Storage/shows'
+      alias codes='cd /...l/Storage/codes'
+      alias ccc='cd /.../Storage/ccc'
+      alias media='cd /.../Storage/multimedia'
+      alias desktop='cd /home/thermal/desktop/'
       alias mplayer='mplayer -fs -zoom -xy 3000:800'
 
       #Kitty
