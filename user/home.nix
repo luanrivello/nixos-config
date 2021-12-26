@@ -27,9 +27,13 @@
   ];
   
   home.file = {
+    ".aliases".text = ''
+    
+    '';
+    
     ".config/alacritty/alacritty.yaml".text = ''
     
-    ''
-  }
+    '';
+  };
   
 }
