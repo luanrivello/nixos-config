@@ -48,7 +48,7 @@
       #Bookmarks
       alias storage='cd /.../Storage'
       alias shows='cd /.../Storage/shows'
-      alias codes='cd /...l/Storage/codes'
+      alias codes='cd /.../Storage/codes'
       alias ccc='cd /.../Storage/ccc'
       alias media='cd /.../Storage/multimedia'
       alias desktop='cd /home/thermal/desktop/'
