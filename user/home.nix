@@ -26,4 +26,10 @@
     alacritty
   ];
   
+  home.file = {
+    ".config/alacritty/alacritty.yaml".text = ''
+    
+    ''
+  }
+  
 }
