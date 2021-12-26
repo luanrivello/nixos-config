@@ -95,7 +95,7 @@
 
     xmobar
     nitrogen
-    xrandr
+    xorg.xrandr
     picom
     dmenu
 
