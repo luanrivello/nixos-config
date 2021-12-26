@@ -50,7 +50,7 @@
       i3status
       i3lock
       i3blocks
-    ]
+    ];
 
     windowManager.xmonad.enable = true;
     windowManager.xmonad.enableContribAndExtras = true;
@@ -75,6 +75,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Security
+  security.doas.enable = true
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.snow = {
     isNormalUser = true;
