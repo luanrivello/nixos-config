@@ -32,7 +32,7 @@
         ".aliases".source = ./dotfiles/.aliases;
         
         #ALACRITTY
-        ".config/alacritty/alacritty.yaml".source = ./dotfiles/.alacritty.yaml;
+        ".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
         #NEOVIM
         ".config/nvim/init.vim".source = ./dotfiles/init.vim;
