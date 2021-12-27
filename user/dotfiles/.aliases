@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#MyAlias
+#Basic Operation
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='clear && ls -CFlh'
+alias mv='mv -v'
+alias cp='cp -v'
+alias rm='rm -Iv'
+
+#Operations
+alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /run/media/thermal/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'
+alias brired='xrandr --output DisplayPort-0 --brightness 0.6 && xrandr --output HDMI-A-0 --brightness 0.6'
+alias brires='xrandr --output DisplayPort-0 --brightness 0.9 && xrandr --output HDMI-A-0 --brightness 0.9'
+
+#Bookmarks
+alias storage='cd /run/media/thermal/Storage'
+alias shows='cd /run/media/thermal/Storage/shows'
+alias codes='cd /run/media/thermal/Storage/codes'
+alias ccc='cd /run/media/thermal/Storage/ccc'
+alias media='cd /run/media/thermal/Storage/multimedia'
+alias workshop='cd /home/thermal/workshop/'
+alias mplayer='mplayer -fs -zoom -xy 3000:800'
+
+#Kitty
+alias icat="kitty +kitten icat"
+alias kdiff="kitty +kitten diff"
+
+#Ambient
+alias v="nvim"
+alias n="nnn -axSQ"
+alias nnn="nnn -Q"
+alias sxiv='sxiv -f -q -a'
+alias mpv='mpv -fs'
+alias mplayer='mplayer -fs'
+alias sxiv='sxiv -faq'
+alias matrix='cmatrix -bs'
+alias tar='tar -v'
+
