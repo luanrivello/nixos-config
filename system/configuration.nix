@@ -59,10 +59,10 @@
 
     windowManager.xmonad.enable = true;
     windowManager.xmonad.enableContribAndExtras = true;
-    windowManager.xmonad.extraPackages = with hpkgs; [
-      xmonad
-      xmonad-contrib
-      xmonad-extras
+    windowManager.xmonad.extraPackages = hpkgs: [
+      hpkgs.xmonad
+      hpkgs.xmonad-contrib
+      hpkgs.xmonad-extras
     ];
   };
 
