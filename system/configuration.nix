@@ -111,7 +111,7 @@
     
     #Fonts
     cascadia-code
-    nerdfonts
+    #nerdfonts
 
     xmobar
     nitrogen
