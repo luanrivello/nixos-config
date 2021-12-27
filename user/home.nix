@@ -216,8 +216,7 @@
       #  - /path/to/alacritty.yml
 
       # Any items in the `env` entry below will be added as
-      # environment variables. Some entries may override variables
-      # set by alacritty itself.
+      # environment variables. Some entries may override variables set by alacritty itself.
       env:
         # TERM variable
         #
@@ -250,11 +249,11 @@
         # Blank space added around the window in pixels. This padding is scaled
         # by DPI and the specified value is always added at both opposing sides.
         padding:
-          x: 2
-          y: 2
+          x: 4
+          y: 4
 
         # Spread additional padding evenly around the terminal content.
-        #dynamic_padding: false
+        dynamic_padding: false
 
         # Window decorations
         #
@@ -271,7 +270,7 @@
         #
         # Window opacity as a floating point number from `0.0` to `1.0`.
         # The value `0.0` is completely transparent and `1.0` is opaque.
-        opacity: 0.6
+        opacity: 0.8
 
         # Startup Mode (changes require restart)
         #
@@ -282,7 +281,7 @@
         #
         # Values for `startup_mode` (macOS only):
         #   - SimpleFullscreen
-        startup_mode: Maximized
+        startup_mode: Windowed
 
         # Window title
         title: Alacritty
@@ -366,8 +365,8 @@
         # of as modifying the line spacing, and `offset.x` as modifying the letter
         # spacing.
         offset:
-          x: 0
-          y: 0
+          x: -1
+          y: -1
 
         # Glyph offset determines the locations of the glyphs within their cells with
         # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -383,15 +382,15 @@
         #use_thin_strokes: true
 
       # If `true`, bold text is drawn using the bright color variants.
-      draw_bold_text_with_bright_colors: false
+      draw_bold_text_with_bright_colors: true
 
       # Colors (Tomorrow Night)
       colors:
         # Default colors
         primary:
-          background: '#2b2b60'
-          #foreground: '#ec1460'
-          #foreground: '#32ef23'
+          #background: '#2b2b40'
+          #background: '#1b1b1b'
+          background: '#000000'
           foreground: '#eeeeee'
 
           # Bright and dim foreground colors
@@ -410,8 +409,8 @@
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
         cursor:
-          text: '#32ef23'
-          cursor: '#ec1460'
+          text: '#000000'
+          cursor: '#f32427'
 
         # Vi mode cursor colors
         #
@@ -420,8 +419,8 @@
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
         vi_mode_cursor:
-          text: '#32ef23'
-          cursor: '#ec1460'
+          text: '#000000'
+          cursor: '#f32427'
 
         # Search colors
         #
@@ -430,16 +429,16 @@
           # Allowed values are CellForeground/CellBackground, which reference the
           # affected cell, or hexadecimal colors like #ff00ff.
           matches:
-            foreground: '#000000'
-            background: '#ffffff'
-
-          focused_match:
             foreground: '#ffffff'
             background: '#000000'
 
+          focused_match:
+            foreground: '#32ef23'
+            background: '#000000'
+
           bar:
-            background: '#c5c8c6'
-            foreground: '#1d1f21'
+            background: '#000000'
+            foreground: '#32ef23'
 
         # Keyboard regex hints
         #hints:
@@ -465,9 +464,9 @@
         # search and vi mode.
         #
         # By default, these will use the opposing primary color.
-        #line_indicator:
-        #  foreground: None
-        #  background: None
+        line_indicator:
+          foreground: '#ec1460'
+          background: '#000000'
 
         # Selection colors
         #
@@ -475,31 +474,32 @@
         #
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
-        #selection:
-        #  text: CellBackground
-        #  background: CellForeground
+        selection:
+          text: '#f32427'
+          background: '#000000'
 
         # Normal colors
-        #normal:
-        #  black:   '#1d1f21'
-        #  red:     '#cc6666'
-        #  green:   '#b5bd68'
-        #  yellow:  '#f0c674'
-        #  blue:    '#81a2be'
-        #  magenta: '#b294bb'
-        #  cyan:    '#8abeb7'
-        #  white:   '#c5c8c6'
+        normal:
+          black:   '#2b2b60'
+          red:     '#f32427'
+          green:   '#32ef23'
+          yellow:  '#d24113'
+          blue:    '#4f73bd'
+          magenta: '#ec1460'
+          cyan:    '#7eb7e2'
+          white:   '#ccccdd'
+
 
         # Bright colors
-        #bright:
-        #  black:   '#666666'
-        #  red:     '#d54e53'
-        #  green:   '#b9ca4a'
-        #  yellow:  '#e7c547'
-        #  blue:    '#7aa6da'
-        #  magenta: '#c397d8'
-        #  cyan:    '#70c0b1'
-        #  white:   '#eaeaea'
+        bright:
+          black:   '#ccccdd'
+          red:     '#f32427'
+          green:   '#32ef23'
+          yellow:  '#d24113'
+          blue:    '#4f73bd'
+          magenta: '#ec1460'
+          cyan:    '#7eb7e2'
+          white:   '#ccccdd'
 
         # Dim colors
         #
@@ -530,7 +530,7 @@
         # Whether or not `window.opacity` applies to all cell backgrounds or only to
         # the default background. When set to `true` all cells will be transparent
         # regardless of their background color.
-        #transparent_background_colors: false
+        transparent_background_colors: false
 
       # Bell
       #
@@ -599,7 +599,7 @@
           #   - Off: Disable blinking by default
           #   - On: Enable blinking by default
           #   - Always: Force the cursor to always blink
-          blinking: On
+          blinking: Always
 
         # Vi mode cursor style
         #
@@ -610,7 +610,7 @@
         vi_mode_style: None
 
         # Cursor blinking interval in milliseconds.
-        blink_interval: 750
+        blink_interval: 500
 
         # If this is `true`, the cursor will be rendered as a hollow box when the
         # window is not focused.
@@ -656,8 +656,8 @@
         # The `double_click` and `triple_click` settings control the time
         # alacritty should wait for accepting multiple clicks as one double
         # or triple click.
-        #double_click: { threshold: 300 }
-        #triple_click: { threshold: 300 }
+        double_click: { threshold: 500 }
+        triple_click: { threshold: 500 }
 
         # If this is `true`, the cursor is temporarily hidden when typing.
         hide_when_typing: true
@@ -734,9 +734,9 @@
       # And optionally:
       #
       # - `mods` (see key bindings)
-      #mouse_bindings:
+      mouse_bindings:
       #  - { mouse: Right,             action: ExpandSelection }
-      #  - { mouse: Middle, mode: ~Vi, action: PasteSelection  }
+        - { mouse: Middle, mode: ~Vi, action: PasteSelection  }
 
       # Key bindings
       #
@@ -986,8 +986,8 @@
         - { key: Left,                        mode: Vi|~Search, action: Left                    }
         - { key: Right,                       mode: Vi|~Search, action: Right                   }
         - { key: Key0,                        mode: Vi|~Search, action: First                   }
-        - { key: Key4,   mods: Shift,         mode: Vi|~Search, action: Last                    }
-        - { key: Key6,   mods: Shift,         mode: Vi|~Search, action: FirstOccupied           }
+        - { key: Key4,                        mode: Vi|~Search, action: Last                    }
+        - { key: Key9,                        mode: Vi|~Search, action: FirstOccupied           }
         - { key: H,      mods: Shift,         mode: Vi|~Search, action: High                    }
         - { key: M,      mods: Shift,         mode: Vi|~Search, action: Middle                  }
         - { key: L,      mods: Shift,         mode: Vi|~Search, action: Low                     }
@@ -997,7 +997,7 @@
         - { key: B,      mods: Shift,         mode: Vi|~Search, action: WordLeft                }
         - { key: W,      mods: Shift,         mode: Vi|~Search, action: WordRight               }
         - { key: E,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
-        - { key: Key5,   mods: Shift,         mode: Vi|~Search, action: Bracket                 }
+        - { key: Key3,                        mode: Vi|~Search, action: Bracket                 }
         - { key: Slash,                       mode: Vi|~Search, action: SearchForward           }
         - { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
         - { key: N,                           mode: Vi|~Search, action: SearchNext              }
@@ -1023,7 +1023,7 @@
         - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
         - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
         - { key: Insert,         mods: Shift,                           action: PasteSelection   }
-        - { key: Key0,           mods: Control,                         action: ResetFontSize    }
+        - { key: Key0,                                                  action: ResetFontSize    }
         - { key: Equals,         mods: Control,                         action: IncreaseFontSize }
         - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
         - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
@@ -1050,6 +1050,7 @@
 
         # Print all received window events.
         print_events: false
+
     '';
   };
   
