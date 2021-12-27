@@ -38,7 +38,8 @@
       alias mv='mv -v'
       alias cp='cp -v'
       alias rm='rm -Iv'
-      alias update = nixos-channel --update && nixos-rebuild switch
+      alias sudo='doas'
+      alias update='nixos-channel --update && nixos-rebuild switch'
 
       #Operations
       alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /run/media/thermal/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'
