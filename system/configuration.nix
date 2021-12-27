@@ -17,7 +17,7 @@
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/by-label/boot";
+  boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "cabin"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -108,6 +108,10 @@
     #Internet
     firefox
     dolphin
+    
+    #Fonts
+    cascadia-code
+    nerdfonts
 
     xmobar
     nitrogen
