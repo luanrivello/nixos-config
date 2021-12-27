@@ -57,13 +57,13 @@
       i3blocks
     ];
 
-    windowManager.xmonad.enable = true;
-    windowManager.xmonad.enableContribAndExtras = true;
-    windowManager.xmonad.extraPackages = hpkgs: [
-      hpkgs.xmonad
-      hpkgs.xmonad-contrib
-      hpkgs.xmonad-extras
-    ];
+    # windowManager.xmonad.enable = true;
+    # windowManager.xmonad.enableContribAndExtras = true;
+    # windowManager.xmonad.extraPackages = hpkgs: [
+    #   hpkgs.xmonad
+    #   hpkgs.xmonad-contrib
+    #   hpkgs.xmonad-extras
+    # ];
   };
 
   # Configure keymap in X11
@@ -71,7 +71,7 @@
   # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  # services.printing.enable = true;
 
   # Enable sound.
   sound.enable = true;
@@ -87,7 +87,7 @@
   users.users.snow = {
     isNormalUser = true;
     initialPassword = "y";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo/doas’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
@@ -107,13 +107,13 @@
 
     #Internet
     firefox
-    dolphin
+    #dolphin
     
     #Fonts
     cascadia-code
     #nerdfonts
 
-    xmobar
+    #xmobar
     nitrogen
     xorg.xrandr
     picom
