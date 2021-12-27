@@ -22,6 +22,11 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   
+  home.keyboard = {
+    layout = "dvorak";
+    options = [ "caps:escape" ];
+  };
+  
   home.packages = with pkgs; [
     alacritty
   ];
