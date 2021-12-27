@@ -12,7 +12,7 @@
     username = "snow";
     homeDirectory = "/home/snow";
 
-    # You can update Home Manager without changing this value. 
+    # DONT CHANGE THIS VALUE 
     stateVersion = "21.11";
 
     keyboard = {
@@ -34,9 +34,10 @@
         #ALACRITTY
         ".config/alacritty/alacritty.yaml".source = ./dotfiles/.alacritty.yaml;
 
-        #ALACRITTY
+        #NEOVIM
         ".config/nvim/init.vim".source = ./dotfiles/init.vim;
-
     };
+    
   };
+  
 }
