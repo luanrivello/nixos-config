@@ -38,17 +38,17 @@
       # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
       # for examples
 
-      # If not running interactively, don't do anything
-      case $- in
+      # If not running interactively, don'''t do anything
+      case ''$- in
           *i*) ;;
             *) return;;
       esac
 
-      # don't put duplicate lines or lines starting with space in the history.
+      # don'''t put duplicate lines or lines starting with space in the history.
       # See bash(1) for more options
       HISTCONTROL=ignoreboth
 
-      # append to the history file, don't overwrite it
+      # append to the history file, don'''t overwrite it
       shopt -s histappend
 
       # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
@@ -64,14 +64,14 @@
       #shopt -s globstar
 
       # make less more friendly for non-text input files, see lesspipe(1)
-      [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+      [ -x /usr/bin/lesspipe ] && eval "''$(SHELL=/bin/sh lesspipe)"
 
-      if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-          debian_chroot=$(cat /etc/debian_chroot)
+      if [ -z "''${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+          debian_chroot=''$(cat /etc/debian_chroot)
       fi
 
       # set a fancy prompt (non-color, unless we know we "want" color)
-      #case "$TERM" in
+      #case "''$TERM" in
       #    xterm-color|*-256color) color_prompt=yes;;
       #esac
 
@@ -80,9 +80,9 @@
       # should be on the output of commands, not on the prompt
       #force_color_prompt=yes
 
-      #if [ -n "$force_color_prompt" ]; then
+      #if [ -n "''$force_color_prompt" ]; then
       #    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-      #	# We have color support; assume it's compliant with Ecma-48
+      #	# We have color support; assume it'''s compliant with Ecma-48
       #	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
       #	# a case would tend to support setf rather than setaf.)
       #	color_prompt=yes
@@ -92,17 +92,17 @@
       #fi
 
       color_prompt=yes
-      if [ "$color_prompt" = yes ]; then
-          PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\n\[\033[01;34m\]\w\n\[\033[00m\]\$:'
+      if [ "''$color_prompt" = yes ]; then
+          PS1='''''${debian_chroot:+(''$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\n\[\033[01;34m\]\w\n\[\033[00m\]\''$:'''
       else
-          PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+          PS1='''''${debian_chroot:+(''$debian_chroot)}\u@\h:\w\''$ '''
       fi
       unset color_prompt force_color_prompt
 
       # If this is an xterm set the title to user@host:dir
-      case "$TERM" in
+      case "''$TERM" in
       xterm*|rxvt*)
-          PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+          PS1="\[\e]0;''${debian_chroot:+(''$debian_chroot)}\u@\h: \w\a\]''$PS1"
           ;;
       *)
           ;;
@@ -110,22 +110,22 @@
 
       # enable color support of ls and also add handy aliases
       if [ -x /usr/bin/dircolors ]; then
-          test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-          alias ls='ls --color=auto'
-          #alias dir='dir --color=auto'
-          #alias vdir='vdir --color=auto'
+          test -r ~/.dircolors && eval "''$(dircolors -b ~/.dircolors)" || eval "''$(dircolors -b)"
+          alias ls='''ls --color=auto'''
+          #alias dir='''dir --color=auto'''
+          #alias vdir='''vdir --color=auto'''
 
-          alias grep='grep --color=auto'
-          alias fgrep='fgrep --color=auto'
-          alias egrep='egrep --color=auto'
+          alias grep='''grep --color=auto'''
+          alias fgrep='''fgrep --color=auto'''
+          alias egrep='''egrep --color=auto'''
       fi
 
       # colored GCC warnings and errors
-      #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+      #export GCC_COLORS='''error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'''
 
       # Add an "alert" alias for long running commands.  Use like so:
       #   sleep 10; alert
-      alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+      alias alert='''notify-send --urgency=low -i "''$([ ''$? = 0 ] && echo terminal || echo error)" "''$(history|tail -n1|sed -e '''\''''''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert''$//'''\'''''')"'''
 
       # Alias definitions.
       # You may want to put all your additions into a separate file like
@@ -138,11 +138,11 @@
 
       #Java
       #export JAVA_HOME="/usr/lib/java-14-openjdk/"  
-      #export PATH=$JAVA_HOME/bin:$PATH
+      #export PATH=''$JAVA_HOME/bin:''$PATH
       #export PATH_TO_FX="/lib/jvm/java-14-openjdk/lib/"
 
       #Go
-      #export PATH=$PATH:/run/media/thermal/Storage/codes/go/bin
+      #export PATH=''$PATH:/run/media/thermal/Storage/codes/go/bin
       #export GOPATH=/run/media/thermal/Storage/codes/go
 
       #vim
@@ -162,28 +162,28 @@
 
       #MyAlias
       #Basic Operation
-      alias ll='ls -alFh'
-      alias la='ls -A'
-      alias l='clear && ls -CFlh'
-      alias mv='mv -v'
-      alias cp='cp -v'
-      alias rm='rm -Iv'
-      alias sudo='doas'
-      alias update='nixos-channel --update && nixos-rebuild switch'
+      alias ll='''ls -alFh'''
+      alias la='''ls -A'''
+      alias l='''clear && ls -CFlh'''
+      alias mv='''mv -v'''
+      alias cp='''cp -v'''
+      alias rm='''rm -Iv'''
+      alias sudo='''doas'''
+      alias update='''nixos-channel --update && nixos-rebuild switch'''
 
       #Operations
-      alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /run/media/thermal/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'
-      alias brired='xrandr --output DisplayPort-0 --brightness 0.6 && xrandr --output HDMI-A-0 --brightness 0.6'
-      alias brires='xrandr --output DisplayPort-0 --brightness 0.9 && xrandr --output HDMI-A-0 --brightness 0.9'
+      alias umysite='''sudo rsync -vr --delete-during --exclude '''.git/''' --exclude '''.vscode/''' --exclude '''README.md'''--exclude '''.gitignore''' /run/media/thermal/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'''
+      alias brired='''xrandr --output DisplayPort-0 --brightness 0.6 && xrandr --output HDMI-A-0 --brightness 0.6'''
+      alias brires='''xrandr --output DisplayPort-0 --brightness 0.9 && xrandr --output HDMI-A-0 --brightness 0.9'''
 
       #Bookmarks
-      alias storage='cd /.../Storage'
-      alias shows='cd /.../Storage/shows'
-      alias codes='cd /.../Storage/codes'
-      alias ccc='cd /.../Storage/ccc'
-      alias media='cd /.../Storage/multimedia'
-      alias desktop='cd /home/thermal/desktop/'
-      alias mplayer='mplayer -fs -zoom -xy 3000:800'
+      alias storage='''cd /.../Storage'''
+      alias shows='''cd /.../Storage/shows'''
+      alias codes='''cd /.../Storage/codes'''
+      alias ccc='''cd /.../Storage/ccc'''
+      alias media='''cd /.../Storage/multimedia'''
+      alias desktop='''cd /home/thermal/desktop/'''
+      alias mplayer='''mplayer -fs -zoom -xy 3000:800'''
 
       #Kitty
       alias icat="kitty +kitten icat"
@@ -193,12 +193,12 @@
       alias v="nvim"
       alias n="nnn -axSQ"
       alias nnn="nnn -Q"
-      alias sxiv='sxiv -f -q -a'
-      alias mpv='mpv -fs'
-      alias mplayer='mplayer -fs'
-      alias sxiv='sxiv -faq'
-      alias matrix='cmatrix -bs'
-      alias tar='tar -v'
+      alias sxiv='''sxiv -f -q -a'''
+      alias mpv='''mpv -fs'''
+      alias mplayer='''mplayer -fs'''
+      alias sxiv='''sxiv -faq'''
+      alias matrix='''cmatrix -bs'''
+      alias tar='''tar -v'''
     '';
     
     #ALACRITTY
@@ -220,7 +220,7 @@
       env:
         # TERM variable
         #
-        # This value is used to set the `$TERM` environment variable for
+        # This value is used to set the `''$TERM` environment variable for
         # each instance of Alacritty. If it is not present, alacritty will
         # check the local terminfo database and use `alacritty` if it is
         # available, otherwise `xterm-256color` is used.
@@ -286,7 +286,7 @@
         # Window title
         title: Alacritty
 
-        # Allow terminal applications to change Alacritty's window title.
+        # Allow terminal applications to change Alacritty'''s window title.
         dynamic_title: true
 
         # Window class (Linux/BSD only):
@@ -304,7 +304,7 @@
 
       scrolling:
         # Maximum number of lines in the scrollback buffer.
-        # Specifying '0' will disable scrolling.
+        # Specifying '''0''' will disable scrolling.
         history: 10000
 
         # Scrolling distance multiplier.
@@ -388,10 +388,10 @@
       colors:
         # Default colors
         primary:
-          #background: '#2b2b40'
-          #background: '#1b1b1b'
-          background: '#000000'
-          foreground: '#eeeeee'
+          #background: '''#2b2b40'''
+          #background: '''#1b1b1b'''
+          background: '''#000000'''
+          foreground: '''#eeeeee'''
 
           # Bright and dim foreground colors
           #
@@ -399,8 +399,8 @@
           # present. If the bright foreground color is not set, or
           # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
           # color will be used.
-          #dim_foreground: '#828482'
-          #bright_foreground: '#eaeaea'
+          #dim_foreground: '''#828482'''
+          #bright_foreground: '''#eaeaea'''
 
         # Cursor colors
         #
@@ -409,8 +409,8 @@
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
         cursor:
-          text: '#000000'
-          cursor: '#f32427'
+          text: '''#000000'''
+          cursor: '''#f32427'''
 
         # Vi mode cursor colors
         #
@@ -419,8 +419,8 @@
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
         vi_mode_cursor:
-          text: '#000000'
-          cursor: '#f32427'
+          text: '''#000000'''
+          cursor: '''#f32427'''
 
         # Search colors
         #
@@ -429,16 +429,16 @@
           # Allowed values are CellForeground/CellBackground, which reference the
           # affected cell, or hexadecimal colors like #ff00ff.
           matches:
-            foreground: '#ffffff'
-            background: '#000000'
+            foreground: '''#ffffff'''
+            background: '''#000000'''
 
           focused_match:
-            foreground: '#32ef23'
-            background: '#000000'
+            foreground: '''#32ef23'''
+            background: '''#000000'''
 
           bar:
-            background: '#000000'
-            foreground: '#32ef23'
+            background: '''#000000'''
+            foreground: '''#32ef23'''
 
         # Keyboard regex hints
         #hints:
@@ -447,16 +447,16 @@
           # Allowed values are CellForeground/CellBackground, which reference the
           # affected cell, or hexadecimal colors like #ff00ff.
           #start:
-          #  foreground: '#1d1f21'
-          #  background: '#e9ff5e'
+          #  foreground: '''#1d1f21'''
+          #  background: '''#e9ff5e'''
 
           # All characters after the first one in the hint label
           #
           # Allowed values are CellForeground/CellBackground, which reference the
           # affected cell, or hexadecimal colors like #ff00ff.
           #end:
-          #  foreground: '#e9ff5e'
-          #  background: '#1d1f21'
+          #  foreground: '''#e9ff5e'''
+          #  background: '''#1d1f21'''
 
         # Line indicator
         #
@@ -465,8 +465,8 @@
         #
         # By default, these will use the opposing primary color.
         line_indicator:
-          foreground: '#ec1460'
-          background: '#000000'
+          foreground: '''#ec1460'''
+          background: '''#000000'''
 
         # Selection colors
         #
@@ -475,53 +475,53 @@
         # Allowed values are CellForeground/CellBackground, which reference the
         # affected cell, or hexadecimal colors like #ff00ff.
         selection:
-          text: '#f32427'
-          background: '#000000'
+          text: '''#f32427'''
+          background: '''#000000'''
 
         # Normal colors
         normal:
-          black:   '#2b2b60'
-          red:     '#f32427'
-          green:   '#32ef23'
-          yellow:  '#d24113'
-          blue:    '#4f73bd'
-          magenta: '#ec1460'
-          cyan:    '#7eb7e2'
-          white:   '#ccccdd'
+          black:   '''#2b2b60'''
+          red:     '''#f32427'''
+          green:   '''#32ef23'''
+          yellow:  '''#d24113'''
+          blue:    '''#4f73bd'''
+          magenta: '''#ec1460'''
+          cyan:    '''#7eb7e2'''
+          white:   '''#ccccdd'''
 
 
         # Bright colors
         bright:
-          black:   '#ccccdd'
-          red:     '#f32427'
-          green:   '#32ef23'
-          yellow:  '#d24113'
-          blue:    '#4f73bd'
-          magenta: '#ec1460'
-          cyan:    '#7eb7e2'
-          white:   '#ccccdd'
+          black:   '''#ccccdd'''
+          red:     '''#f32427'''
+          green:   '''#32ef23'''
+          yellow:  '''#d24113'''
+          blue:    '''#4f73bd'''
+          magenta: '''#ec1460'''
+          cyan:    '''#7eb7e2'''
+          white:   '''#ccccdd'''
 
         # Dim colors
         #
         # If the dim colors are not set, they will be calculated automatically based
         # on the `normal` colors.
         #dim:
-        #  black:   '#131415'
-        #  red:     '#864343'
-        #  green:   '#777c44'
-        #  yellow:  '#9e824c'
-        #  blue:    '#556a7d'
-        #  magenta: '#75617b'
-        #  cyan:    '#5b7d78'
-        #  white:   '#828482'
+        #  black:   '''#131415'''
+        #  red:     '''#864343'''
+        #  green:   '''#777c44'''
+        #  yellow:  '''#9e824c'''
+        #  blue:    '''#556a7d'''
+        #  magenta: '''#75617b'''
+        #  cyan:    '''#5b7d78'''
+        #  white:   '''#828482'''
 
         # Indexed Colors
         #
         # The indexed colors include all colors from 16 to 256.
-        # When these are not set, they're filled with sensible defaults.
+        # When these are not set, they'''re filled with sensible defaults.
         #
         # Example:
-        #   `- { index: 16, color: '#ff00ff' }`
+        #   `- { index: 16, color: '''#ff00ff''' }`
         #
         #indexed_colors: []
 
@@ -558,7 +558,7 @@
         #duration: 0
 
         # Visual bell animation color.
-        #color: '#ffffff'
+        #color: '''#ffffff'''
 
         # Bell Command
         #
@@ -576,7 +576,7 @@
       selection:
         # This string contains all characters that are used as separators for
         # "semantic words" in Alacritty.
-        semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+        semantic_escape_chars: ",│`|:\"''' ()[]{}<>\t"
 
         # When set to `true`, selected text will be copied to the primary clipboard.
         save_to_clipboard: true
@@ -687,11 +687,11 @@
         #
         # Values for `action`:
         #   - Copy
-        #       Copy the hint's text to the clipboard.
+        #       Copy the hint'''s text to the clipboard.
         #   - Paste
-        #       Paste the hint's text to the terminal or search.
+        #       Paste the hint'''s text to the terminal or search.
         #   - Select
-        #       Select the hint's text.
+        #       Select the hint'''s text.
         #   - MoveViModeCursor
         #       Move the vi mode cursor to the beginning of the hint.
         #enabled:
@@ -795,7 +795,7 @@
       #   - ScrollToTop
       #   - ScrollToBottom
       #   - ClearHistory
-      #       Remove the terminal's scrollback history.
+      #       Remove the terminal'''s scrollback history.
       #   - Hide
       #       Hide the Alacritty window.
       #   - Minimize
@@ -808,7 +808,7 @@
       #   - CreateNewWindow
       #       Create a new Alacritty window from the current process.
       #   - ClearLogNotice
-      #       Clear Alacritty's UI warning and error notice.
+      #       Clear Alacritty'''s UI warning and error notice.
       #   - ClearSelection
       #       Remove the active selection.
       #   - ReceiveChar
@@ -865,7 +865,7 @@
       #   - WordRightEnd
       #       End of the next whitespace separated word.
       #   - Bracket
-      #       Character matching the bracket at the cursor's location.
+      #       Character matching the bracket at the cursor'''s location.
       #   - SearchNext
       #       Beginning of the next match.
       #   - SearchPrevious
