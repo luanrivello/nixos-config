@@ -9,13 +9,13 @@
     ./hardware-configuration.nix
   ];
 
-  # DONT CHANGE THIS VALUE 
+  # DONT CHANGE THIS VALUE
   system.stateVersion = "21.11"; # Did you read the comment?
 
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
-  
+
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
@@ -57,8 +57,8 @@
       i3status
       i3lock
       i3blocks
-    ];
 
+    ];
     # windowManager.xmonad.enable = true;
     # windowManager.xmonad.enableContribAndExtras = true;
     # windowManager.xmonad.extraPackages = hpkgs: [
@@ -85,7 +85,7 @@
   # Security
   security.doas.enable = true;
   security.sudo.enable = false;
-  
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.snow = {
     isNormalUser = true;
@@ -98,7 +98,7 @@
   environment.systemPackages = with pkgs; [
     #Terminal
     man
-    neovim 
+    neovim
     wget
     git
     alacritty
@@ -108,15 +108,15 @@
     #Internet
     firefox
     #dolphin
-    
+
     #Fonts
     cascadia-code
     #nerdfonts
 
-    #xmobar
-    nitrogen
+    #desktop
     xorg.xrandr
     picom
+    nitrogen
     dmenu
 
   ];

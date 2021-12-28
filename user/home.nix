@@ -9,7 +9,7 @@
   programs.home-manager.enable = true;
 
   home = {
-    #  DONT CHANGE THIS VALUE 
+    # DONT CHANGE THIS VALUE 
     stateVersion = "21.11";
 
     username = "snow";
@@ -17,29 +17,29 @@
 
 
     keyboard = {
-        layout = "dvorak";
-        options = [ "caps:escape" ];
+      layout = "dvorak";
+      options = [ "caps:escape" ];
     };
     
     packages = with pkgs; [
-        alacritty
-        notepadqq
-        zsh
-        neofetch
+      alacritty
+      notepadqq
+      zsh
+      neofetch
     ];
     
     file = {
-        #BASHRC
-        ".bashrc".source = ./dotfiles/.bashrc;
-        
-        #ALIASES
-        ".aliases".source = ./dotfiles/.aliases;
-        
-        #ALACRITTY
-        ".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
+      #BASHRC
+      #".bashrc".source = ./dotfiles/.bashrc;
+      
+      #ALIASES
+      ".aliases".source = ./dotfiles/.aliases;
+       
+      #ALACRITTY
+      ".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
-        #NEOVIM
-        ".config/nvim/init.vim".source = ./dotfiles/init.vim;
+      #NEOVIM
+      ".config/nvim/init.vim".source = ./dotfiles/init.vim;
     };
     
   };
