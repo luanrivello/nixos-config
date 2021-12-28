@@ -8,6 +8,7 @@ alias l='clear && ls -CFlh'
 alias mv='mv -v'
 alias cp='cp -v'
 alias rm='rm -Iv'
+alias sudo='doas'
 
 #Operations
 alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /mnt/snow/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'

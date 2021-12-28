@@ -30,9 +30,6 @@
     ];
     
     file = {
-      #BASHRC
-      #".bashrc".source = ./dotfiles/.bashrc;
-      
       #ALIASES
       ".aliases".source = ./dotfiles/.aliases;
        
