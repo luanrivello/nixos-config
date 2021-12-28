@@ -26,6 +26,7 @@
       notepadqq
       zsh
       neofetch
+      cascadia-code
     ];
     
     file = {
