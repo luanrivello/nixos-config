@@ -9,11 +9,12 @@
   programs.home-manager.enable = true;
 
   home = {
+    #  DONT CHANGE THIS VALUE 
+    stateVersion = "21.11";
+
     username = "snow";
     homeDirectory = "/home/snow";
 
-    # DONT CHANGE THIS VALUE 
-    stateVersion = "21.11";
 
     keyboard = {
         layout = "dvorak";
@@ -22,6 +23,9 @@
     
     packages = with pkgs; [
         alacritty
+        notepadqq
+        zsh
+        neofetch
     ];
     
     file = {
