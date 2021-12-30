@@ -15,7 +15,6 @@
     username = "snow";
     homeDirectory = "/home/snow";
 
-
     keyboard = {
       layout = "dvorak";
       options = [ "caps:escape" ];
@@ -29,6 +28,12 @@
       cascadia-code
     ];
     
+    programs.zsh.ohMyZsh = {
+      enable = true;
+      plugins = [ "git" pip vi-mode extract]
+      theme = "spaceship";
+    }
+
     file = {
       #ALIASES
       ".aliases".source = ./dotfiles/.aliases;
