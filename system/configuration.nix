@@ -57,8 +57,8 @@
       i3status
       i3lock
       i3blocks
-
     ];
+
     # windowManager.xmonad.enable = true;
     # windowManager.xmonad.enableContribAndExtras = true;
     # windowManager.xmonad.extraPackages = hpkgs: [
@@ -81,16 +81,20 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+  
+  # Shell
+  programs.zsh.enable = true;
 
   # Security
-  security.doas.enable = true;
-  security.sudo.enable = false;
+  # security.doas.enable = true;
+  # security.sudo.enable = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.snow = {
     isNormalUser = true;
     initialPassword = "y";
     extraGroups = [ "wheel" ]; # Enable ‘sudo/doas’ for the user.
+    shell = pkgs.zsh;
   };
 
   # List packages installed in system profile. To search, run:
@@ -102,7 +106,6 @@
     wget
     git
     alacritty
-    zsh
     xorg.xkill
 
     #Internet
