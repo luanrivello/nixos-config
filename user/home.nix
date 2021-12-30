@@ -8,12 +8,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.zsh.ohMyZsh = {
-    enable = true;
-    plugins = [ "git" "pip" "vi-mode" "extract" ];
-    theme = "spaceship";
-  };
-
   home = {
     # DONT CHANGE THIS VALUE 
     stateVersion = "21.11";

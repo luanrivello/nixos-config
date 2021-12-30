@@ -85,6 +85,12 @@
   # Shell
   programs.zsh.enable = true;
 
+  programs.zsh.ohMyZsh = {
+    enable = true;
+    plugins = [ "git" "pip" "vi-mode" "extract" ];
+    theme = "spaceship";
+  };
+
   # Security
   # security.doas.enable = true;
   # security.sudo.enable = false;
