@@ -30,9 +30,9 @@
     
     programs.zsh.ohMyZsh = {
       enable = true;
-      plugins = [ "git" pip vi-mode extract]
+      plugins = [ "git" "pip" "vi-mode" "extract" ];
       theme = "spaceship";
-    }
+    };
 
     file = {
       #ALIASES
