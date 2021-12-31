@@ -8,19 +8,20 @@ alias l='clear && ls -CFlh'
 alias mv='mv -v'
 alias cp='cp -v'
 alias rm='rm -Iv'
+alias sudo='doas'
 
 #Operations
-alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /run/media/thermal/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'
+alias umysite='sudo rsync -vr --delete-during --exclude '.git/' --exclude '.vscode/' --exclude 'README.md'--exclude '.gitignore' /mnt/snow/Storage/codes/html-css-js/my-site/ /srv/http/ && systemctl restart httpd'
 alias brired='xrandr --output DisplayPort-0 --brightness 0.6 && xrandr --output HDMI-A-0 --brightness 0.6'
 alias brires='xrandr --output DisplayPort-0 --brightness 0.9 && xrandr --output HDMI-A-0 --brightness 0.9'
 
 #Bookmarks
-alias storage='cd /run/media/thermal/Storage'
-alias shows='cd /run/media/thermal/Storage/shows'
-alias codes='cd /run/media/thermal/Storage/codes'
-alias ccc='cd /run/media/thermal/Storage/ccc'
-alias media='cd /run/media/thermal/Storage/multimedia'
-alias workshop='cd /home/thermal/workshop/'
+alias storage='cd /mnt/snow/Storage'
+alias shows='cd /mnt/snow/Storage/shows'
+alias codes='cd /mnt/snow/Storage/codes'
+alias ccc='cd /mnt/snow/Storage/ccc'
+alias media='cd /mnt/snow/Storage/multimedia'
+alias workshop='cd /home/snow/workshop/'
 alias mplayer='mplayer -fs -zoom -xy 3000:800'
 
 #Kitty
@@ -31,7 +32,6 @@ alias kdiff="kitty +kitten diff"
 alias v="nvim"
 alias n="nnn -axSQ"
 alias nnn="nnn -Q"
-alias sxiv='sxiv -f -q -a'
 alias mpv='mpv -fs'
 alias mplayer='mplayer -fs'
 alias sxiv='sxiv -faq'

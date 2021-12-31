@@ -9,33 +9,34 @@
   programs.home-manager.enable = true;
 
   home = {
-    username = "snow";
-    homeDirectory = "/home/snow";
-
     # DONT CHANGE THIS VALUE 
     stateVersion = "21.11";
 
+    username = "snow";
+    homeDirectory = "/home/snow";
+
     keyboard = {
-        layout = "dvorak";
-        options = [ "caps:escape" ];
+      layout = "dvorak";
+      options = [ "caps:escape" ];
     };
     
     packages = with pkgs; [
-        alacritty
+      alacritty
+      notepadqq
+      zsh
+      neofetch
+      cascadia-code
     ];
     
     file = {
-        #BASHRC
-        ".bashrc".source = ./dotfiles/.bashrc;
-        
-        #ALIASES
-        ".aliases".source = ./dotfiles/.aliases;
-        
-        #ALACRITTY
-        ".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
+      #ALIASES
+      ".aliases".source = ./dotfiles/.aliases;
+       
+      #ALACRITTY
+      ".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
-        #NEOVIM
-        ".config/nvim/init.vim".source = ./dotfiles/init.vim;
+      #NEOVIM
+      ".config/nvim/init.vim".source = ./dotfiles/init.vim;
     };
     
   };

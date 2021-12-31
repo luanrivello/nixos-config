@@ -41,9 +41,12 @@ map <C-p> :PlugClean \| :PlugUpdate \| :PlugUpgrade <CR>
 nnoremap <CR> :noh<CR><CR>
 
 ""buffers
-map gn :bn<cr> 
+map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
+
+"" Tracing spaces
+map gs :%s/\s\+$//<cr>
 
 ""center
 nnoremap j jzz
@@ -70,31 +73,28 @@ inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <C-k> :m .-2<CR>==
 nnoremap <C-j> :m .+1<CR>==
 
-"Plugins
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-"Plug 'mcchrish/nnn.vim'
-Plug 'voldikss/vim-floaterm'
-
-"Plug 'preservim/nerdtree'
-"Plug 'ryanoasis/vim-devicons'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-"Plug 'ap/vim-css-color'
-"Plug 'chrisbra/Colorizer'
-"Plug 'lilydjwg/colorizer'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
-"Plug 'ycm-core/YouCompleteMe'"
-"Plug 'zxqfl/tabnine-vim'"
-
-call plug#end()
+""Plugins
+"call plug#begin('~/.config/nvim/plugged')
+"
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"
+""Plug 'mcchrish/nnn.vim'
+"Plug 'voldikss/vim-floaterm'
+"
+""Plug 'preservim/nerdtree'
+""Plug 'ryanoasis/vim-devicons'
+""Plug 'Xuyuanp/nerdtree-git-plugin'
+""Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"
+"Plug 'tpope/vim-surround'
+"Plug 'jiangmiao/auto-pairs'
+"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+"
+""Plug 'ycm-core/YouCompleteMe'"
+""Plug 'zxqfl/tabnine-vim'"
+"
+"call plug#end()
 
 "Hex Color Visualizer
 ""let g:Hexokinase_highlighters = ['foregroundfull']

@@ -237,22 +237,26 @@ colors:
       foreground: '#32ef23'
 
   # Keyboard regex hints
-  #hints:
+  hints:
     # First character in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #start:
-    #  foreground: '#1d1f21'
-    #  background: '#e9ff5e'
+    start:
+      foreground: '#f32427'
+      background: '#000000'
+      #foreground: '#1d1f21'
+      #background: '#e9ff5e'
 
     # All characters after the first one in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #end:
-    #  foreground: '#e9ff5e'
-    #  background: '#1d1f21'
+    end:
+      foreground: '#000000'
+      background: '#f32427'
+      #foreground: '#e9ff5e'
+      #background: '#1d1f21'
 
   # Line indicator
   #
@@ -279,7 +283,7 @@ colors:
     black:   '#2b2b60'
     red:     '#f32427'
     green:   '#32ef23'
-    yellow:  '#d24113'
+    yellow:  '#ee4000'
     blue:    '#4f73bd'
     magenta: '#ec1460'
     cyan:    '#7eb7e2'
@@ -291,7 +295,7 @@ colors:
     black:   '#ccccdd'
     red:     '#f32427'
     green:   '#32ef23'
-    yellow:  '#d24113'
+    yellow:  '#ee4000'
     blue:    '#4f73bd'
     magenta: '#ec1460'
     cyan:    '#7eb7e2'
@@ -751,7 +755,7 @@ key_bindings:
   - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
 
   # Vi Mode
-  - { key: V,      mods: Control,       mode: AppCursor,  action: ToggleViMode            }
+  - { key: Space,  mods: Control,       mode: AppCursor,  action: ToggleViMode            }
   - { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
   - { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
   - { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
