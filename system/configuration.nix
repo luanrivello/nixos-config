@@ -21,7 +21,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
 
-  networking.hostName = "cabin"; # Define your hostname.
+  networking.hostName = "NextOS"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
@@ -48,10 +48,11 @@
   services.xserver = {
     enable = true;
 
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm.enable = false;
     displayManager.defaultSession = "none+i3";
 
     windowManager.i3.enable = true;
+    windowManager.i3.package = pkgs.i3-gaps
     windowManager.i3.extraPackages = with pkgs; [
       dmenu
       i3status
@@ -101,11 +102,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #Terminal
+    alacritty
     man
     neovim
     wget
     git
-    alacritty
     xorg.xkill
 
     #Internet
@@ -114,13 +115,14 @@
 
     #Fonts
     cascadia-code
-    #nerdfonts
+    nerdfonts
 
     #desktop
     xorg.xrandr
     picom
     nitrogen
     dmenu
+    polybar
 
   ];
 
