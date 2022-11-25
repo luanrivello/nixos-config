@@ -49,7 +49,7 @@
     enable = true;
 
     displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "bspwm";
+    displayManager.defaultSession = "none+bspwm";
     
     windowManager.bspwm.enable = true;
 
