@@ -21,7 +21,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda";
 
-  networking.hostName = "cabin"; # Define your hostname.
+  networking.hostName = "Nexos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
@@ -41,7 +41,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "us";
+    keyMap = "dv";
   };
 
   # Enable the X11 windowing system.
@@ -49,15 +49,19 @@
     enable = true;
 
     displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "none+i3";
+    displayManager.defaultSession = "bspwm";
+    
+    windowManager.bspwm.enable = true;
 
-    windowManager.i3.enable = true;
-    windowManager.i3.extraPackages = with pkgs; [
-      dmenu
-      i3status
-      i3lock
-      i3blocks
-    ];
+    #displayManager.defaultSession = "none+i3";
+
+    #windowManager.i3.enable = true;
+    #windowManager.i3.extraPackages = with pkgs; [
+    #  dmenu
+    #  i3status
+    #  i3lock
+    #  i3blocks
+    #];
 
     # windowManager.xmonad.enable = true;
     # windowManager.xmonad.enableContribAndExtras = true;
@@ -85,22 +89,16 @@
   # Shell
   programs.zsh.enable = true;
 
-  programs.zsh.ohMyZsh = {
-    enable = true;
-    plugins = [ "git" "pip" "vi-mode" "extract" ];
-    theme = "spaceship";
-  };
-
   # Security
   # security.doas.enable = true;
   # security.sudo.enable = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.snow = {
+  users.users.skuld = {
     isNormalUser = true;
-    initialPassword = "y";
+    #initialPassword = "y";
     extraGroups = [ "wheel" ]; # Enable ‘sudo/doas’ for the user.
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   # List packages installed in system profile. To search, run:
@@ -112,7 +110,6 @@
     wget
     git
     alacritty
-    xorg.xkill
 
     #Internet
     firefox
@@ -123,10 +120,10 @@
     #nerdfonts
 
     #desktop
+    xorg.xkill
     xorg.xrandr
     picom
     nitrogen
-    dmenu
 
   ];
 
