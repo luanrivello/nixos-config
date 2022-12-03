@@ -6,6 +6,12 @@
 
 #? nixos-install
 #? nixos-rebuild switch
+#? nix-env -iA <name>
+#? nix-env -q
+#? nix-channel --update
+#? nixos-rebuild switch --upgrade
+#? sudo nix-collect-garbage -d
+#? nix-env --delete-generations 90d
 
 {
   #* Include the results of the hardware scan.
@@ -13,6 +19,19 @@
 
   #! DONT CHANGE THIS VALUE
   system.stateVersion = "21.11"; 
+  #TODO system.autoUgrade = {
+  #  enable = true;
+  #  channel = "";
+  #}
+  #TODO Garbage Collection
+  #nix = {
+  #  settings.auto-optimise-store = true;
+  #  gc = {
+  #    automatic = true;
+  #    dates = "weekly";
+  #    options = "--delete-older-than 60d";
+  #  };
+  #};
 
   #* systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
@@ -89,7 +108,7 @@
 
   #* Define a user account. 
   #!Don't forget to set a password with ‘passwd’.
-  users.users.skuld = {
+  users.users.snow = {
     isNormalUser = true;
     initialPassword = "y";
     shell = pkgs.fish;
@@ -110,6 +129,7 @@
     #*Terminal
     alacritty
     neovim
+    htop
     wget
     git
     man
