@@ -9,7 +9,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   #! DONT CHANGE THIS VALUE
-  system.stateVersion = "21.11"; #? Did you read the comment?
+  system.stateVersion = "21.11"; 
 
   #* systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
@@ -25,8 +25,10 @@
   };
 
   #* Define your hostname.
-  networking.hostName = "Nexos"; 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nexos"; 
+
+  #* Enables wireless support via wpa_supplicant.
+  #? networking.wireless.enable = true;  
 
   #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
@@ -48,6 +50,7 @@
     keyMap = "dvorak";
   };
 
+  #? Use wayland when supported ?
   #* Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -58,15 +61,18 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
+    #?displayManager.defaultSession = "xfce+bspwm";
     desktopManager.xfce.enable = true;
+    #?windowManager.bspwm.enable = true;
   };
 
   #* Enable CUPS to print documents.
-  # services.printing.enable = true;
+  #? services.printing.enable = true;
 
   #* Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  #TODO Bluetooth
 
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -83,19 +89,27 @@
   users.users.skuld = {
     isNormalUser = true;
     initialPassword = "y";
-    extraGroups = [ "wheel" ]; #! Enable ‘sudo/doas’ for the user.
     shell = pkgs.fish;
+
+    extraGroups = [ 
+      "wheel"         #! Enable ‘sudo/doas’ for the user. 
+      "video" 
+      "audio" 
+      "networkmanager" 
+      "lp" "scanner"  #! Printer
+    ]; 
   };
 
   #* List packages installed in system profile. To search, run:
-  #? $ nix search wget
+  #* $ nix search wget
   environment.systemPackages = with pkgs; [
+
     #*Terminal
     alacritty
     neovim
-    man
     wget
     git
+    man
 
     #*Internet
     firefox
