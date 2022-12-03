@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 
+#? nix-channel --add https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz home-manager
+#? nix-channel --update
+#? nix-shell '<home-manager>' -A install
+
 {
-  #? nix-channel --add https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz home-manager
-  #? nix-channel --update
-  #? nix-shell '<home-manager>' -A install
-  
+
   #* Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 

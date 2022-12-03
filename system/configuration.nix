@@ -4,6 +4,8 @@
 
 { config, pkgs, ... }:
 
+#? nixos-install
+
 {
   #* Include the results of the hardware scan.
   imports = [ ./hardware-configuration.nix ];
