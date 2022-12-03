@@ -5,6 +5,7 @@
 { config, pkgs, ... }:
 
 #? nixos-install
+#? nixos-rebuild switch
 
 {
   #* Include the results of the hardware scan.
