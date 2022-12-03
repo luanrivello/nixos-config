@@ -48,33 +48,13 @@
   services.xserver = {
     enable = true;
 
+    # Configure keymap in X11
+    layout = "dvorak";
+    xkbOptions = "caps:swapesc";
+
     displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "none+bspwm";
-    
-    windowManager.bspwm.enable = true;
-
-    #displayManager.defaultSession = "none+i3";
-
-    #windowManager.i3.enable = true;
-    #windowManager.i3.extraPackages = with pkgs; [
-    #  dmenu
-    #  i3status
-    #  i3lock
-    #  i3blocks
-    #];
-
-    # windowManager.xmonad.enable = true;
-    # windowManager.xmonad.enableContribAndExtras = true;
-    # windowManager.xmonad.extraPackages = hpkgs: [
-    #   hpkgs.xmonad
-    #   hpkgs.xmonad-contrib
-    #   hpkgs.xmonad-extras
-    # ];
+    desktopManager.xfce.enable = true;
   };
-
-  # Configure keymap in X11
-  services.xserver.layout = "dvorak";
-  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -96,7 +76,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.skuld = {
     isNormalUser = true;
-    #initialPassword = "y";
+    initialPassword = "pass";
     extraGroups = [ "wheel" ]; # Enable ‘sudo/doas’ for the user.
     shell = pkgs.fish;
   };
@@ -105,11 +85,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #Terminal
-    man
+    alacritty
     neovim
+    man
     wget
     git
-    alacritty
 
     #Internet
     firefox
@@ -122,8 +102,8 @@
     #desktop
     xorg.xkill
     xorg.xrandr
-    picom
     nitrogen
+    #picom
 
   ];
 
