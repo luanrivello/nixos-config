@@ -115,7 +115,7 @@
 
   #* Define a user account. 
   #!Don't forget to set a password with ‘passwd’.
-  users.users.snow = {
+  users.users.skuld = {
     isNormalUser = true;
     initialPassword = "y";
     shell = pkgs.fish;
