@@ -40,9 +40,9 @@
   #* GRUB 2 boot loader.
   boot.loader.grub = {
     enable = true;
-    grub.version = 2;
-    grub.device = "/dev/sda";
-    grub.useOSProber = true;
+    version = 2;
+    device = "/dev/sda";
+    useOSProber = true;
     #TODO grub.theme = ;
   };
 
