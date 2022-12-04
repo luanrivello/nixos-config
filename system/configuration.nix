@@ -79,16 +79,18 @@
 
     #* Configure keymap in X11
     layout = "dvorak";
-    xkbOptions = "caps:swapesc";
+    xkbOptions = "caps:swapescape";
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
+    displayManager.autologin.enable = true;
     #?displayManager.defaultSession = "xfce+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
     #/home/snow/.configo/autostart/startup
     #'';
     desktopManager.xfce.enable = true;
+    desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
   };
 
@@ -184,6 +186,7 @@
     #picom
     polybar
     rofi
+    #screenshoWiz
 
   ];
 
