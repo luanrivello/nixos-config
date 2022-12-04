@@ -84,6 +84,7 @@
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
     displayManager.lightdm.autoLogin.enable = true;
+    displayManager.lightdm.autoLogin.user = "snow";
     #?displayManager.defaultSession = "xfce+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
