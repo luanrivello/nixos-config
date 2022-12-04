@@ -18,7 +18,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   #! DONT CHANGE THIS VALUE
-  system.stateVersion = "22.11"; 
+  system.stateVersion = "21.11"; 
   #TODO system.autoUgrade = {
   #  enable = true;
   #  channel = "";
@@ -89,9 +89,10 @@
     #/home/snow/.configo/autostart/startup
     #'';
     desktopManager.xfce.enable = true;
-    desktopManager.xfce.enableXfwm = false;
+    #desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
   };
+  #services.xrdp.defaultWindowManager = "bspwm";
 
   #* Enable CUPS to print documents.
   #? services.printing.enable = true;
