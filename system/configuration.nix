@@ -18,7 +18,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   #! DONT CHANGE THIS VALUE
-  system.stateVersion = "21.11"; 
+  system.stateVersion = "22.11"; 
   #TODO system.autoUgrade = {
   #  enable = true;
   #  channel = "";
@@ -83,8 +83,6 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
-    displayManager.lightdm.autoLogin.enable = true;
-    displayManager.lightdm.autoLogin.user = "snow";
     #?displayManager.defaultSession = "xfce+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
