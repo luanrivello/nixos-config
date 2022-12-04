@@ -84,6 +84,10 @@
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
     #?displayManager.defaultSession = "xfce+bspwm";
+    #?displayManager.sessionCommands = ''
+    #!/bin/sh
+    #/home/snow/.configo/autostart/startup
+    #'';
     desktopManager.xfce.enable = true;
     #?windowManager.bspwm.enable = true;
   };
@@ -95,6 +99,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   #TODO Bluetooth
+  #services.blueman.enable = true;
 
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -122,8 +127,34 @@
     ]; 
   };
 
+  #TODO dev enviroment
+  #users.users.crash = {
+  #  isNormalUser = true;
+  #  initialPassword = "y";
+  #  shell = pkgs.fish;
+  #
+  #  extraGroups = [ 
+  #    "wheel"         #! Enable ‘sudo/doas’ for the user. 
+  #    "video" 
+  #    "audio" 
+  #    "networkmanager" 
+  #    "lp" "scanner"  #! Printer
+  #  ]; 
+  #};
+  
+
+  #* List packages installed in system profile. To search, run:
   #* List packages installed in system profile. To search, run:
   #* $ nix search wget
+  #TODO eviroment variables
+  #enviroment.variables = {
+  #  TERMINAL = "alacritty";
+  #  EDITOR = "nvim";
+  #  VISUAL = "nvim";
+  #};
+  #* Dash shell
+  #environment.binsh = "${pkgs.dash}/bin/dash";
+  #environment.binsh = "${pkgs.zsh}/bin/zsh";
   environment.systemPackages = with pkgs; [
 
     #*Terminal
@@ -133,6 +164,8 @@
     wget
     git
     man
+    stow
+    killall
 
     #*Internet
     firefox

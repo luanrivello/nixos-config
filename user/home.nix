@@ -4,6 +4,7 @@
 #? nix-channel --update
 #? nix-shell '<home-manager>' -A install
 #? /home/user/.config/nixpkgs/home.nix
+#? home-manager switch
 
 {
 
