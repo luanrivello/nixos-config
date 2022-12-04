@@ -89,7 +89,7 @@
     #/home/snow/.configo/autostart/startup
     #'';
     desktopManager.xfce.enable = true;
-    #?windowManager.bspwm.enable = true;
+    windowManager.bspwm.enable = true;
   };
 
   #* Enable CUPS to print documents.
@@ -173,15 +173,17 @@
 
     #*Fonts
     cascadia-code
+    #Fira Code
     #nerdfonts
+    #noto-fonts-cjk
 
     #*Desktop
     xorg.xkill
     xorg.xrandr
     nitrogen
     #picom
-    #polybar
-    #rofi
+    polybar
+    rofi
 
   ];
 
