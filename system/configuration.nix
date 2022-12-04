@@ -83,16 +83,16 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
-    #?displayManager.defaultSession = "xfce+bspwm";
+    displayManager.defaultSession = "xfce+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
     #/home/snow/.configo/autostart/startup
     #'';
     desktopManager.xfce.enable = true;
-    #desktopManager.xfce.enableXfwm = false;
+    desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
   };
-  #services.xrdp.defaultWindowManager = "bspwm";
+  services.xrdp.defaultWindowManager = "bspwm";
 
   #* Enable CUPS to print documents.
   #? services.printing.enable = true;
@@ -182,7 +182,7 @@
     #*Desktop
     xorg.xkill
     xorg.xrandr
-    nitrogen
+    feh
     #picom
     polybar
     rofi
