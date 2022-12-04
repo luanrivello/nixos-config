@@ -83,7 +83,7 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
-    displayManager.autologin.enable = true;
+    displayManager.lightdm.autologin.enable = true;
     #?displayManager.defaultSession = "xfce+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
