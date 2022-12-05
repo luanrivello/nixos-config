@@ -173,12 +173,6 @@
     firefox
     #dolphin
 
-    #*Fonts
-    cascadia-code
-    #Fira Code
-    #nerdfonts
-    #noto-fonts-cjk
-
     #*Desktop
     xorg.xkill
     xorg.xrandr
@@ -188,6 +182,14 @@
     rofi
     #screenshoWiz
 
+  ];
+
+  #*Fonts
+  fonts.fonts = with pkgs; [
+    cascadia-code
+    #Fira Code
+    #nerdfonts
+    #noto-fonts-cjk
   ];
 
   #! Some programs need SUID wrappers, can be configured further or are
