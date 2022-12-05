@@ -188,7 +188,7 @@
   fonts.fonts = with pkgs; [
     cascadia-code
     #Fira Code
-    #nerdfonts
+    nerdfonts
     #noto-fonts-cjk
   ];
 
