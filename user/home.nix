@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 #? nix-channel --add https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz home-manager
+#? nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz home-manager
 #? nix-channel --update
 #? nix-shell '<home-manager>' -A install
 #? /home/user/.config/nixpkgs/home.nix
@@ -13,7 +14,7 @@
 
   home = {
     #! DONT CHANGE THIS VALUE 
-    stateVersion = "21.11";
+    stateVersion = "22.11";
 
     username = "snow";
     homeDirectory = "/home/snow";
