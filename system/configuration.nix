@@ -15,10 +15,13 @@
 
 {
   #* Include the results of the hardware scan.
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ 
+    ./hardware-configuration.nix 
+  ];
 
   #! DONT CHANGE THIS VALUE
-  system.stateVersion = "21.11"; 
+  system.stateVersion = "22.11"; #? Did you read the comment?
+
   #TODO system.autoUgrade = {
   #  enable = true;
   #  channel = "";
@@ -49,21 +52,20 @@
   #* Define your hostname.
   networking.hostName = "nexos"; 
 
+  #* Networking
+  networking.networking.enable = true;  
   #* Enables wireless support via wpa_supplicant.
   #? networking.wireless.enable = true;  
-
-  #* Set your time zone.
-  time.timeZone = "Etc/GMT-3";
-
-  #! The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  #! Per-interface useDHCP will be mandatory in the future, so this generated config
-  #! replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.enp0s3.useDHCP = true;
 
   #* Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  #* Set your time zone.
+  time.timeZone = "Etc/GMT-3";
+  
+  #* Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
 
   #* Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -78,7 +80,8 @@
     enable = true;
 
     #* Configure keymap in X11
-    layout = "dvorak";
+    layout = "us";
+    xkbVariant = "dvorak";
     xkbOptions = "caps:swapescape";
 
     #* Desktop Enviroment
@@ -100,6 +103,20 @@
   #* Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    #? If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
+
   #TODO Bluetooth
   #services.blueman.enable = true;
 
@@ -131,32 +148,21 @@
 
   #TODO dev enviroment
   #users.users.crash = {
-  #  isNormalUser = true;
-  #  initialPassword = "y";
-  #  shell = pkgs.fish;
-  #
-  #  extraGroups = [ 
-  #    "wheel"         #! Enable ‘sudo/doas’ for the user. 
-  #    "video" 
-  #    "audio" 
-  #    "networkmanager" 
-  #    "lp" "scanner"  #! Printer
-  #  ]; 
-  #};
-  
 
-  #* List packages installed in system profile. To search, run:
-  #* List packages installed in system profile. To search, run:
-  #* $ nix search wget
   #TODO eviroment variables
   #enviroment.variables = {
   #  TERMINAL = "alacritty";
   #  EDITOR = "nvim";
   #  VISUAL = "nvim";
   #};
+
   #* Dash shell
   #environment.binsh = "${pkgs.dash}/bin/dash";
   #environment.binsh = "${pkgs.zsh}/bin/zsh";
+
+  #* List packages installed in system profile. To search, run:
+  #* $ nix search wget
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
 
     #*Terminal
