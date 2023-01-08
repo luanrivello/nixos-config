@@ -53,7 +53,7 @@
   networking.hostName = "nexos"; 
 
   #* Networking
-  networking.networking.enable = true;  
+  networking.networkmanager.enable = true;  
   #* Enables wireless support via wpa_supplicant.
   #? networking.wireless.enable = true;  
 
