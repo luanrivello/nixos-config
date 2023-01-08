@@ -144,7 +144,7 @@
     
     packages = with pkgs; [
       firefox
-    ]
+    ];
 
   };
 
