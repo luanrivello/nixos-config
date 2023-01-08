@@ -66,9 +66,6 @@
   
   #* Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  #* Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
     keyMap = "dvorak";
@@ -144,6 +141,11 @@
       "networkmanager" 
       "lp" "scanner"  #! Printer
     ]; 
+    
+    packages = with pkgs; [
+      firefox
+    ]
+
   };
 
   #TODO dev enviroment
@@ -176,7 +178,7 @@
     killall
 
     #*Internet
-    firefox
+    #firefox
     #dolphin
 
     #*Desktop
