@@ -17,9 +17,11 @@
   #* Import Modules
   imports = [ 
     ./hardware-configuration.nix 
+    ./boot.nix
     ./networking.nix
     ./desktop.nix
     ./user.nix
+    ./sound.nix
   ];
 
   #! DONT CHANGE THIS VALUE
