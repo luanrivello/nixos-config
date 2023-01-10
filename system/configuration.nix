@@ -17,6 +17,7 @@
   #* Include the results of the hardware scan.
   imports = [ 
     ./hardware-configuration.nix 
+    ./user.nix
   ];
 
   #! DONT CHANGE THIS VALUE
