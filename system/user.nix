@@ -23,6 +23,7 @@
     packages = with pkgs; [
       firefox
       neofetch
+      stow
     ];
 
   };
