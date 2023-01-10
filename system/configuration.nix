@@ -39,19 +39,6 @@
   #  };
   #};
 
-  #* systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
-
-  #* GRUB 2 boot loader.
-  boot.loader.grub = {
-    enable = true;
-    version = 2;
-    device = "/dev/sda";
-    useOSProber = true;
-    #TODO grub.theme = ;
-  };
-
   #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
   
@@ -83,6 +70,10 @@
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
   
+  #* Dash shell
+  #environment.binsh = "${pkgs.dash}/bin/dash";
+  #environment.binsh = "${pkgs.zsh}/bin/zsh";
+
   #* Shell
   programs.zsh.enable = true;
 
@@ -90,19 +81,12 @@
   # security.doas.enable = true;
   # security.sudo.enable = false;
 
-  #TODO dev enviroment
-  #users.users.crash = {
-
   #TODO eviroment variables
   #enviroment.variables = {
   #  TERMINAL = "alacritty";
   #  EDITOR = "nvim";
   #  VISUAL = "nvim";
   #};
-
-  #* Dash shell
-  #environment.binsh = "${pkgs.dash}/bin/dash";
-  #environment.binsh = "${pkgs.zsh}/bin/zsh";
 
   #* List packages installed in system profile. To search, run:
   #* $ nix search wget
