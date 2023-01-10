@@ -21,8 +21,8 @@
     theme = pkgs.fetchFromGitHub {
       owner = "AllJavi";
       repo = "tartarus-grub";
-      rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
-      sha256 = "sha256-b116360a2a0991062a4d728cb005dfd309fbb82a";
+      rev = "b116360a2a0991062a4d728cb005dfd309fbb82a";
+      sha256 = null;
     };
   };
 
