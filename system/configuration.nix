@@ -103,6 +103,28 @@
     desktopManager.xfce.enable = true;
     desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
+    windowManager.bspwm.configFile = pkgs.writeText "bspwmrc" ''
+    pgrep -x sxhkd > /dev/null || sxhkd &
+    polybar &
+
+    bspc monitor -d I II III IV V VI VII VIII IX X
+    #bspc monitor HDMI-A-0 -d I II III IV V
+    #bspc monitor DisplayPort-0 -d VI VII VIII IX X
+
+
+    bspc config border_width         4
+    bspc config window_gap          16
+
+    bspc config split_ratio          0.54
+    bspc config borderless_monocle   true
+    bspc config gapless_monocle      true
+
+    #bspc rule -a Gimp desktop='^8' state=floating follow=on
+    #bspc rule -a Chromium desktop='^2'
+    #bspc rule -a mplayer2 state=floating
+    #bspc rule -a Kupfer.py focus=on
+    #bspc rule -a Screenkey manage=off
+    '';
   };
   services.xrdp.defaultWindowManager = "bspwm";
 
