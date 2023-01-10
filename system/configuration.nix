@@ -41,15 +41,7 @@
   #  };
   #};
 
-  # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda";
-
-  networking.hostName = "NextOS"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Set your time zone.
+  #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
   
   #* Select internationalisation properties.
@@ -74,39 +66,10 @@
   #* Enable CUPS to print documents.
   #? services.printing.enable = true;
 
-    displayManager.lightdm.enable = false;
-    displayManager.defaultSession = "none+i3";
+  #TODO Bluetooth
+  #services.blueman.enable = true;
 
-    windowManager.i3.enable = true;
-    windowManager.i3.package = pkgs.i3-gaps
-    windowManager.i3.extraPackages = with pkgs; [
-      dmenu
-      i3status
-      i3lock
-      i3blocks
-    ];
-
-    # windowManager.xmonad.enable = true;
-    # windowManager.xmonad.enableContribAndExtras = true;
-    # windowManager.xmonad.extraPackages = hpkgs: [
-    #   hpkgs.xmonad
-    #   hpkgs.xmonad-contrib
-    #   hpkgs.xmonad-extras
-    # ];
-  };
-
-  # Configure keymap in X11
-  services.xserver.layout = "dvorak";
-  # services.xserver.xkbOptions = "eurosign:e";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
+  #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
   
   #* Dash shell
@@ -131,29 +94,29 @@
   #* $ nix search wget
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    #Terminal
+
+    #*Terminal
     alacritty
-    man
     neovim
     htop
     wget
     git
-    xorg.xkill
+    man
+    stow
+    killall
 
     #*Internet
     #firefox
     #dolphin
 
-    #Fonts
-    #cascadia-code
-    #nerdfonts
-
-    #desktop
+    #*Desktop
+    xorg.xkill
     xorg.xrandr
-    picom
-    nitrogen
-    dmenu
+    feh
+    #picom
     polybar
+    rofi
+    #screenshoWiz
 
   ];
 
