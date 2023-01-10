@@ -1,8 +1,7 @@
 #* DESKTOP ENVIRONMENT
 { config, pkgs, ... }:
+
 {
-  imports = [ ];
-  
   #? Use wayland when supported ?
   #* Enable the X11 windowing system.
   services.xserver = {
