@@ -1,4 +1,4 @@
-#* NETWORK CONFIGURATION
+#* NETWORKING 
 { config, pkgs, ... }:
 
 {
