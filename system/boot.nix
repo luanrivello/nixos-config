@@ -12,18 +12,18 @@
     device = "/dev/sda";
     useOSProber = true;
     #theme = pkgs.nixos-grub2-theme;
-#    theme = pkgs.fetchFromGitHub {
-#      owner = "shvchk";
-#      repo = "fallout-grub-theme";
-#      rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
-#      sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
-#    };
     theme = pkgs.fetchFromGitHub {
-      owner = "AllJavi";
-      repo = "tartarus-grub";
-      rev = "b116360a2a0991062a4d728cb005dfd309fbb82a";
-      sha256 = null;
+      owner = "shvchk";
+      repo = "fallout-grub-theme";
+      rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
+      sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
     };
+    #theme = pkgs.fetchFromGitHub {
+    #  owner = "AllJavi";
+    #  repo = "tartarus-grub";
+    #  rev = "b116360a2a0991062a4d728cb005dfd309fbb82a";
+    #  sha256 = "0000000000000000000000000000000000000000000000000000";
+    #};
   };
 
 }
