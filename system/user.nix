@@ -59,7 +59,7 @@ in
         "${config}/nvim/init.vim".source = dotfiles + /nvim/.config/nvim/init.vim;
         
         #POLYBAR
-        "${.config}/polybar/config.ini".source = dotfiles + /polybar/.config/polybar/config.ini;
+        "${config}/polybar/config.ini".source = dotfiles + /polybar/.config/polybar/config.ini;
       };
     };
     
