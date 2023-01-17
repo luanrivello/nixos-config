@@ -30,7 +30,11 @@ in
     
   };
 
-  home-manager.users.skuld = { pkgs, ... }: {
+  home-manager.users.skuld = { pkgs, ... }: 
+  let
+    dotfiles = "./nixos-config/user/.dotfiles";
+  in
+  {
     #* Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
     
@@ -45,7 +49,7 @@ in
 
       file = {
         #ALIASES
-        ".aliases".source = "${dotfiles}"/enviroment/.aliases;
+        ".aliases".source = ${dotfiles}/enviroment/.aliases;
          
         #ALACRITTY
         #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
