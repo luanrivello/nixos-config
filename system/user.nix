@@ -65,7 +65,7 @@ in
     };
     
     services.polybar.enable = true;
-    services.polybar.script = "polybar &";
+    services.polybar.script = "polybar main &";
 
   };
 }
