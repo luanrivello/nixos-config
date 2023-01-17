@@ -2,7 +2,6 @@
 { pkgs, ... }:
 let 
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
-  dotfiles = ./nixos-config/user/.dotfiles;
 in
 { 
   imports = [ 
@@ -32,7 +31,9 @@ in
 
   home-manager.users.skuld = { pkgs, ... }: 
   let
-    dotfiles = ./nixos-config/user/.dotfiles;
+    home = "/home/skuld/";
+    config = "/home/skuld/.config";
+    dotfiles = "/home/skuld/nixos-config/user/.dotfiles";
   in
   {
     #* Let Home Manager install and manage itself.
@@ -49,16 +50,16 @@ in
 
       file = {
         #ALIASES
-        ".aliases".source = dotfiles + /enviroment/.aliases;
+        "${home}/.aliases".source = dotfiles + /enviroment/.aliases;
          
         #ALACRITTY
         #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
         #NEOVIM
-        ".config/nvim/init.vim".source = "${dotfiles}/nvim/.config/nvim/init.vim";
+        "${config}/nvim/init.vim".source = dotfiles + /nvim/.config/nvim/init.vim;
         
         #POLYBAR
-        ".config/polybar/config.ini".source = "${dotfiles}/polybar/.config/polybar/config.ini";
+        "${.config}/polybar/config.ini".source = dotfiles + /polybar/.config/polybar/config.ini;
       };
     };
     
