@@ -45,16 +45,16 @@ in
 
       file = {
         #ALIASES
-        ".aliases".source = ${dotfiles}/enviroment/.aliases;
+        ".aliases".source = "${dotfiles}/enviroment/.aliases";
          
         #ALACRITTY
         #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
         #NEOVIM
-        ".config/nvim/init.vim".source = ${dotfiles}/nvim/.config/nvim/init.vim
+        ".config/nvim/init.vim".source = "${dotfiles}/nvim/.config/nvim/init.vim";
         
         #POLYBAR
-        ".config/polybar/config.ini".source = ${dotfiles}/polybar/.config/polybar/config.ini
+        ".config/polybar/config.ini".source = "${dotfiles}/polybar/.config/polybar/config.ini";
       };
     };
     
