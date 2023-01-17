@@ -1,5 +1,6 @@
-
+#* BOOT LOADER
 { pkgs, ... }:
+
 {
   #* systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
