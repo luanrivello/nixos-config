@@ -22,7 +22,7 @@
     desktopManager.xfce.enable = true;
     desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
-    windowManager.bspwm.configFile = "/home/skuld/.config/bspwm/bspwmrc";
+    #windowManager.bspwm.configFile = "/home/skuld/.config/bspwm/bspwmrc";
   };
   services.xrdp.defaultWindowManager = "bspwm";
 
