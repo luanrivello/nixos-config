@@ -73,7 +73,7 @@
   # services.xserver.libinput.enable = true;
   
   #* Dash shell
-  #environment.binsh = "${pkgs.dash}/bin/dash";
+  environment.binsh = "${pkgs.dash}/bin/dash";
   #environment.binsh = "${pkgs.zsh}/bin/zsh";
 
   #* Shell
