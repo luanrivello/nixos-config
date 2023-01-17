@@ -2,7 +2,7 @@
 { pkgs, ... }:
 let 
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
-  dotfiles = "./nixos-config/user/.dotfiles"
+  dotfiles = "./nixos-config/user/.dotfiles";
 in
 { 
   imports = [ 
