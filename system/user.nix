@@ -65,7 +65,7 @@ in
     };
     
     xsession.windowManager.bspwm.enable = true;
-    #xsession.windowManager.bspwm.settings = ;
+    xsession.windowManager.bspwm.settings = "${config}/bspwm/bspwmrc";
     
     services.polybar.enable = true;
     services.polybar.script = "polybar main &";
