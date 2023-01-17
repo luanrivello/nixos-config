@@ -45,7 +45,7 @@ in
 
       file = {
         #ALIASES
-        ".aliases".source = "${dotfiles}/enviroment/.aliases";
+        ".aliases".source = "./nixos-config/user/.dotfiles/enviroment/.aliases";
          
         #ALACRITTY
         #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
