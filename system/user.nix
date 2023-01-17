@@ -50,7 +50,7 @@ in
 
       file = {
         #ALIASES
-        "${home}/.aliases".source = dotfiles + /enviroment/.aliases;
+        "${home}/.aliases".source = "${dotfiles}/enviroment/.aliases";
          
         #ALACRITTY
         #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
