@@ -1,5 +1,5 @@
 #* SOUND
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   #* Enable sound.

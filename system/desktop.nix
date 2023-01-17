@@ -1,5 +1,5 @@
 #* DESKTOP ENVIRONMENT
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   #? Use wayland when supported ?

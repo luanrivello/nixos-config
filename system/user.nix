@@ -1,5 +1,5 @@
 #* USER CONFIGURATION
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   #TODO dev enviroment

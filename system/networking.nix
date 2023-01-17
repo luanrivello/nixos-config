@@ -1,5 +1,5 @@
 #* NETWORKING 
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   #* Define your hostname.
