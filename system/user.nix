@@ -64,6 +64,9 @@ in
       };
     };
     
+    xsession.windowManager.bspwm.enable = true;
+    #xsession.windowManager.bspwm.settings = ;
+    
     services.polybar.enable = true;
     services.polybar.script = "polybar main &";
 
