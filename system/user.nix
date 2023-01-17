@@ -36,9 +36,12 @@ in
   };
 
   home-manager.users.skuld = {pkgs, ... }: {
-    stateVersion = "22.11";
-
     #* Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
+    
+    home = {
+      stateVersion = "22.11";
+    };
+
   };
 }
