@@ -25,12 +25,11 @@
     };
     
     packages = with pkgs; [
-      zsh
       alacritty
       nvim
       notepadqq
       neofetch
-      cascadia-code
+      #cascadia-code
     ];
     
     file = {

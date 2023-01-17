@@ -1,7 +1,14 @@
 #* USER CONFIGURATION
-{ pkgs, ... }:
+{ config, pkgs, ... }:
+let 
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+in
+{ 
+  imports = [ 
+    #./home-manager.nix
+    (import "${home-manager}/nixos")
+  ];
 
-{
   #TODO dev enviroment
   #users.users.crash = {
 
@@ -27,4 +34,11 @@
     ];
 
   };
+
+  home-manager.users.skuld = {pkgs, ... }: {
+    stateVersion = "22.11";
+
+    #* Let Home Manager install and manage itself.
+    programs.home-manager.enable = true;
+  }
 }

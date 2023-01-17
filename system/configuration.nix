@@ -72,7 +72,7 @@
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
   
-  #* Dash shell
+  #* Sh shell
   environment.binsh = "${pkgs.dash}/bin/dash";
   #environment.binsh = "${pkgs.zsh}/bin/zsh";
 
