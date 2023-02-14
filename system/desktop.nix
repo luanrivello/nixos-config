@@ -13,19 +13,19 @@
     xkbOptions = "caps:swapescape";
 
     #* Desktop Enviroment
-    displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "xfce+bspwm";
+    #displayManager.lightdm.enable = true;
+    displayManager.defaultSession = "none+bspwm";
     #?displayManager.sessionCommands = ''
     #!/bin/sh
     #/home/snow/.config/autostart/startup
     #'';
-    desktopManager.xfce.enable = true;
-    desktopManager.xfce.enableXfwm = false;
+    #desktopManager.xfce.enable = true;
+    #desktopManager.xfce.enableXfwm = false;
     windowManager.bspwm.enable = true;
     windowManager.default = "bspwm";
-    desktopManager.xterm.enable = false;
+    #desktopManager.xterm.enable = false;
     #windowManager.bspwm.configFile = "/home/skuld/.config/bspwm/bspwmrc";
   };
-  services.xrdp.defaultWindowManager = "bspwm";
+  #services.xrdp.defaultWindowManager = "bspwm";
 
 }
