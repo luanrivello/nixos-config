@@ -105,6 +105,7 @@
     wget
     git
     man
+    file
     stow
     killall
 
