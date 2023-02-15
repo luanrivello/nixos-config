@@ -13,7 +13,6 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
-    displayManager.lightdm.greeters.slick.enable = true;
     displayManager = {
       defaultSession = "none+bspwm";
     };
