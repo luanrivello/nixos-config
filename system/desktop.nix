@@ -15,7 +15,7 @@
     displayManager.lightdm.enable = true;
     displayManager = {
       defaultSession = "none+bspwm";
-      user = "skuld";
+      lightdm.greeters.slick.enable = true;
     };
     windowManager.bspwm.enable = true;
     desktopManager.xterm.enable = false;
