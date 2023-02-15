@@ -47,11 +47,20 @@ users.users.skuld = {
       stateVersion = "22.11";
 
       packages = with pkgs; [
-        firefox
+        #*Terminal
+        alacritty
         neofetch
+        neovim
+
+        #*Internet
+        firefox
+
+        #*Desktop
         polybar
+        rofi
         stow
         fish
+        feh
       ];
 
       file = {

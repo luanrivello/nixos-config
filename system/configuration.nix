@@ -115,10 +115,7 @@
     #*Desktop
     xorg.xkill
     xorg.xrandr
-    feh
     #picom
-    polybar
-    rofi
     #screenshoWiz
 
   ];
@@ -126,7 +123,7 @@
   #*Fonts
   fonts.fonts = with pkgs; [
     cascadia-code
-    #Fira Code
+    Fira Code
     nerdfonts
     #noto-fonts-cjk
   ];
