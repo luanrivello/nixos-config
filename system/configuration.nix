@@ -74,16 +74,16 @@
   
   #* Sh shell
   environment.binsh = "${pkgs.dash}/bin/dash";
-  #environment.binsh = "${pkgs.zsh}/bin/zsh";
 
   #* Shell
   programs.zsh.enable = true;
 
   #* Security
-  security.doas.enable = true;
   security.sudo.enable = false;
+  security.doas.enable = true;
   security.doas.extraRules = [{
-    users = [ "skuld" ];
+    #users = [ "skuld" ];
+    groups = [ "wheel" ];
     keepEnv = true;
   }];
 
