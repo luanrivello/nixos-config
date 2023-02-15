@@ -13,7 +13,12 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "none+bspwm";
+    displayManager = {
+      defaultSession = "none+bspwm";
+      user = "skuld";
+    };
     windowManager.bspwm.enable = true;
+    desktopManager.xterm.enable = false;
   };
+  
 }

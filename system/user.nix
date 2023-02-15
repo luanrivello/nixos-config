@@ -1,6 +1,10 @@
 #* USER CONFIGURATION
 { pkgs, ... }:
 let 
+  #? sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz home-manager
+  #? nix-channel --update
+  #? /home/user/.config/nixpkgs/home.nix
+  #? home-manager switch
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
 in
 { 
@@ -17,7 +21,7 @@ in
 users.users.skuld = {
     isNormalUser = true;
     initialPassword = "y";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
 
     extraGroups = [ 
       "wheel"         #! Enable ‘sudo/doas’ for the user. 
@@ -47,6 +51,7 @@ users.users.skuld = {
         neofetch
         polybar
         stow
+        fish
       ];
 
       file = {
@@ -66,8 +71,8 @@ users.users.skuld = {
     
     #xsession.windowManager.bspwm.enable = true;
     
-    services.polybar.enable = true;
-    services.polybar.script = "polybar main &";
+    #services.polybar.enable = true;
+    #services.polybar.script = "polybar main &";
 
   };
 }
