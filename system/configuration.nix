@@ -123,7 +123,7 @@
   #*Fonts
   fonts.fonts = with pkgs; [
     cascadia-code
-    Fira Code
+    fira-code
     nerdfonts
     #noto-fonts-cjk
   ];
