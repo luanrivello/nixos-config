@@ -13,9 +13,9 @@
 
     #* Desktop Enviroment
     displayManager.lightdm.enable = true;
+    displayManager.lightdm.greeters.slick.enable = true;
     displayManager = {
       defaultSession = "none+bspwm";
-      lightdm.greeters.slick.enable = true;
     };
     windowManager.bspwm.enable = true;
     desktopManager.xterm.enable = false;
