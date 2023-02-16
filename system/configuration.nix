@@ -72,10 +72,8 @@
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
   
-  #* Sh shell
-  environment.binsh = "${pkgs.dash}/bin/dash";
-
   #* Shell
+  environment.binsh = "${pkgs.dash}/bin/dash";
   programs.zsh.enable = true;
 
   #* Security
@@ -86,12 +84,13 @@
     keepEnv = true;
   }];
 
-  #TODO eviroment variables
-  #enviroment.variables = {
-  #  TERMINAL = "alacritty";
-  #  EDITOR = "nvim";
-  #  VISUAL = "nvim";
-  #};
+  #*Fonts
+  fonts.fonts = with pkgs; [
+    cascadia-code
+    fira-code
+    nerdfonts
+    #noto-fonts-cjk
+  ];
 
   #* List packages installed in system profile. To search, run:
   #* $ nix search wget
@@ -120,14 +119,14 @@
     #screenshoWiz
 
   ];
-
-  #*Fonts
-  fonts.fonts = with pkgs; [
-    cascadia-code
-    fira-code
-    nerdfonts
-    #noto-fonts-cjk
-  ];
+  
+  environment.etc."current-system-packages".text =
+  let
+  packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+  sortedUnique = builtins.sort builtins.lessThan (lib.unique packages);
+  formatted = builtins.concatStringsSep "\n" sortedUnique;
+  in
+  formatted;
 
   #! Some programs need SUID wrappers, can be configured further or are
   #! started in user sessions.
