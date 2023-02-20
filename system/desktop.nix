@@ -17,7 +17,7 @@
       defaultSession = "none+bspwm";
     };
     windowManager.bspwm.enable = true;
-    desktopManager.xterm.enable = false;
+    desktopManager.xterm.enable = true;
   };
   
 }
