@@ -19,13 +19,7 @@
 
     windowManager.bspwm.enable = true;
 
-    desktopManager.xterm.enable = true;
-    extraConfig = ''
-    xterm*Background: black
-    xterm*Foreground: grey
-    xterm*faceName: Monospace
-    xterm*faceSize: 24
-    '';
+    desktopManager.xterm.enable = false;
   };
   
 }
