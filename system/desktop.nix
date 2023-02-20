@@ -20,8 +20,14 @@
     windowManager.bspwm.enable = true;
 
     desktopManager.xterm.enable = true;
-    extraConfig = "xterm*Background: black\nxterm*Foreground: green\nxterm*faceName: Monospace\nxterm*faceSize: 24
-    ";
+    displayManager.sessionCommands = ''
+    ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
+    xterm*Background: black
+    xterm*Foreground: green
+    xterm*faceName: Monospace
+    xterm*faceSize: 24
+    EOF
+    '';
   };
   
 }
