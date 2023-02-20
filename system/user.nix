@@ -39,6 +39,8 @@ users.users.skuld = {
     #* Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
     
+    xsession.windowManager.bspwm.enable = true;
+    
     home = {
       stateVersion = "22.11";
 
