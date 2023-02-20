@@ -16,8 +16,14 @@
     displayManager = {
       defaultSession = "none+bspwm";
     };
+
     windowManager.bspwm.enable = true;
+
     desktopManager.xterm.enable = true;
+    extraConfig = ''
+    XTerm.vt100.background: black
+    XTerm.vt100.foreground: grey
+    '';
   };
   
 }
