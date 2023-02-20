@@ -19,15 +19,6 @@
 
     windowManager.bspwm.enable = true;
 
-    desktopManager.xterm.enable = true;
-    displayManager.sessionCommands = ''
-    ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
-    xterm*Background: black
-    xterm*Foreground: green
-    xterm*faceName: Monospace
-    xterm*faceSize: 24
-    EOF
-    '';
   };
   
 }
