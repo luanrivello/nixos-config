@@ -32,14 +32,14 @@
   #  channel = "";
   #}
   #TODO Garbage Collection
-  #nix = {
-  #  settings.auto-optimise-store = true;
-  #  gc = {
-  #    automatic = true;
-  #    dates = "weekly";
-  #    options = "--delete-older-than 60d";
-  #  };
-  #};
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+  };
 
   #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
