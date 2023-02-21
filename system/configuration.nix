@@ -31,7 +31,7 @@
   #  enable = true;
   #  channel = "";
   #}
-  #TODO Garbage Collection
+  #* Garbage Collection
   nix = {
     settings.auto-optimise-store = true;
     gc = {
