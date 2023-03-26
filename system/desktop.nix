@@ -12,8 +12,9 @@
     xkbOptions = "caps:swapescape";
 
     #* Desktop Enviroment
-    displayManager.lightdm.enable = true;
     displayManager = {
+      lightdm.enable = true;
+      lightdm.greeters.slick.enable = true;
       defaultSession = "none+bspwm";
     };
 

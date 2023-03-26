@@ -88,7 +88,13 @@
   fonts.fonts = with pkgs; [
     cascadia-code
     fira-code
-    nerdfonts
+    #nerdfonts
+    #cascadia-code-nerd
+    #Inconsolata
+    #Iosevka
+    #Fira Mono for Powerline	
+    #Liberation Mono Powerline
+    #Liberation Mono Powerline
     #noto-fonts-cjk
   ];
 
