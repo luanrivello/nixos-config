@@ -15,8 +15,8 @@
 
 {
   #* Import Modules
-  imports = [ 
-    ./hardware-configuration.nix 
+  imports = [
+    ./hardware-configuration.nix
     ./boot.nix
     ./networking.nix
     ./desktop.nix
@@ -43,7 +43,7 @@
 
   #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
-  
+
   #* Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -71,7 +71,7 @@
 
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-  
+
   #* Shell
   environment.binsh = "${pkgs.dash}/bin/dash";
   programs.zsh.enable = true;
@@ -88,14 +88,8 @@
   fonts.fonts = with pkgs; [
     cascadia-code
     fira-code
-    #nerdfonts
-    #cascadia-code-nerd
-    #Inconsolata
-    #Iosevka
-    #Fira Mono for Powerline	
-    #Liberation Mono Powerline
-    #Liberation Mono Powerline
-    #noto-fonts-cjk
+    nerdfonts
+    powerline-fonts
   ];
 
   #* List packages installed in system profile. To search, run:
@@ -125,7 +119,7 @@
     #screenshoWiz
 
   ];
-  
+
   #! Some programs need SUID wrappers, can be configured further or are
   #! started in user sessions.
   # programs.mtr.enable = true;
