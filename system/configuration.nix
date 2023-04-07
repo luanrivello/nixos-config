@@ -86,8 +86,7 @@
 
   #*Fonts
   fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode"]; })
-    #powerline-fonts
+    (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
   ];
 
   #* List packages installed in system profile. To search, run:
