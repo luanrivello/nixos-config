@@ -89,7 +89,7 @@
     cascadia-code
     fira-code
     nerdfonts
-    powerline-fonts
+    #powerline-fonts
   ];
 
   #* List packages installed in system profile. To search, run:
