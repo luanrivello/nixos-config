@@ -21,5 +21,5 @@
     windowManager.bspwm.enable = true;
 
   };
-  
+
 }

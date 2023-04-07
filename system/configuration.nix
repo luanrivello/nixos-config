@@ -86,9 +86,7 @@
 
   #*Fonts
   fonts.fonts = with pkgs; [
-    cascadia-code
-    fira-code
-    nerdfonts
+    (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode"]; })
     #powerline-fonts
   ];
 
