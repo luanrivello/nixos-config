@@ -48,7 +48,9 @@ in
           alacritty
           neofetch
           ripgrep
+          ripgrep-all
           neovim
+          devour
           gotop #bashtop
           ncdu
           tldr

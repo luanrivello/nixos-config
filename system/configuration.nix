@@ -85,9 +85,18 @@
   }];
 
   #*Fonts
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
-  ];
+  fonts = {
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
+      ibm-plex
+    ];
+    enableDefaultFonts = true;
+    fontconfig.defaultFonts = {
+      serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
+      sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
+      monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
+    };
+  };
 
   #* List packages installed in system profile. To search, run:
   #* $ nix search wget
