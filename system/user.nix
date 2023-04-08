@@ -74,7 +74,7 @@ in
           stow
           feh
           nitrogen
-          #file manager
+          xplr
 
           #*Utils
           onlyoffice-bin
