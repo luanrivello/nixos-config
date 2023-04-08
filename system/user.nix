@@ -59,14 +59,34 @@ in
           fd
 
           #*Internet
+          brave
           librewolf
+          tor-browser-bundle-bin
+          steam
+          discord
+          lbry
+          qbittorrent
+          vscode
 
           #*Desktop
           polybar
           rofi
           stow
-          fish
           feh
+          nitrogen
+          #file manager
+
+          #*Utils
+          onlyoffice-bin
+          epdfview
+          calibre
+          krita
+          gimp-with-plugins
+          gcolor3
+          notion-app-enhanced
+          keepassxc
+          gparted
+
         ];
 
         file = {
