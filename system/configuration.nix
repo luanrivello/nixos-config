@@ -25,7 +25,7 @@
   ];
 
   #! DONT CHANGE THIS VALUE
-  system.stateVersion = "22.11"; #? Did you read the comment?
+  system.stateVersion = "nixos-unstable"; #? Did you read the comment?
 
   #TODO system.autoUgrade = {
   #  enable = true;
