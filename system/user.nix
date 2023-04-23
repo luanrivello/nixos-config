@@ -1,8 +1,7 @@
 #* USER CONFIGURATION
 { pkgs, ... }:
 let
-  #home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/master";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
 in
 {
   imports = [
