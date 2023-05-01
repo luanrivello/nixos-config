@@ -33,11 +33,10 @@
   #}
   #* Garbage Collection
   nix = {
-    settings = {
-      extraOptions = "experimental-features = nix-command flakes";
-      auto-optimise-store = true;
-    };
+    package = pkgs.nixFlakes;
+    extraOptions = "experimental-features = nix-command flakes";
 
+    settings.auto-optimise-store = true;
     gc = {
       automatic = true;
       dates = "weekly";
