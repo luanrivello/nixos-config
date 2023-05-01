@@ -9,24 +9,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }: 
-  let
-    system = "x86_64-linux";
-    hostname = "nexos";
+  outputs = { self, nixpkgs, home-manager }:
+    let
+      system = "x86_64-linux";
+      hostname = "nexos";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
 
-  in {
-    nixosConfigurations = {
-      ${hostname} = nixpkgs.lib.nixosSystem {
+    in
+    {
+      nixosConfigurations = {
+        ${hostname} = nixpkgs.lib.nixosSystem {
           inherit pkgs system;
-          modules = [ 
-	    ./system/configuration.nix 
-	  ];
+          modules = [
+            ./system/configuration.nix
+          ];
+        };
       };
     };
-  };
 }
