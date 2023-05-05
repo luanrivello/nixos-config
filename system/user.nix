@@ -1,15 +1,16 @@
 #* USER CONFIGURATION
 { pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
-    sha256 = "1cp2rpprcfl4mjsrsrpfg6278nf05a0mpl3m0snksvdalfmc5si5";
-  };
+  #home-manager = builtins.fetchTarball {
+  #  url = "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+  #  sha256 = "1cp2rpprcfl4mjsrsrpfg6278nf05a0mpl3m0snksvdalfmc5si5";
+  #};
 in
 {
   imports = [
     #./home-manager.nix
-    (import "${home-manager}/nixos")
+    #(import "${home-manager}/nixos")
+    <home-manager/nixos>
   ];
 
   #TODO dev enviroment
