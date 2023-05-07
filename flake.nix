@@ -19,11 +19,13 @@
         inherit system;
         config.allowUnfree = true;
       };
+      
+      lib = nixpkgs.lib;
 
     in
     {
       nixosConfigurations = {
-        ${hostname} = nixpkgs.lib.nixosSystem {
+        ${hostname} = lib.nixosSystem {
           inherit pkgs system;
           modules = [
             ./system/configuration.nix
