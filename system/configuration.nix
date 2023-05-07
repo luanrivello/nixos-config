@@ -31,11 +31,12 @@
   #  enable = true;
   #  channel = "";
   #}
-  #* Garbage Collection
   nix = {
+    #* Flakes
     package = pkgs.nixFlakes;
     extraOptions = "experimental-features = nix-command flakes";
 
+    #* Garbage Collection
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
