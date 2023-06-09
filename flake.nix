@@ -22,36 +22,21 @@
         inherit system;
         config.allowUnfree = true;
       };
-
     in
     {
       nixosConfigurations = {
         ${hostname} = nixpkgs.lib.nixosSystem {
           inherit pkgs system;
-
-          modules = [
-            ./system/configuration.nix
-
-            #home-manager.nixosModules.home-manager
-            #{
-            #  home-manager = {
-            #    useUserPackages = true;
-            #    useGlobalPkgs = true;
-            #    users.${username} = ./system/home.nix;
-            #  };
-            #}
-
-          ];
+          modules = [ ./system/configuration.nix ];
         };
       };
-      
+
       homeConfigurations = {
         ${username} = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            modules = [
-              ./system/home.nix
-            ];
+          inherit pkgs;
+          modules = [ ./system/home.nix ];
         };
       };
+
     };
 }
