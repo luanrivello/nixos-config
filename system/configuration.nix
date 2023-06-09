@@ -2,7 +2,7 @@
 #* your system.  Help is available in the configuration.nix(5) man page
 #* and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 #? nixos-install
 #? nixos-rebuild switch
@@ -21,7 +21,7 @@
     ./networking.nix
     ./desktop.nix
     ./sound.nix
-    ./user.nix
+    ./user.nix {inherit username;}
   ];
 
   #! DONT CHANGE THIS VALUE

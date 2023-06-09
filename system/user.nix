@@ -1,5 +1,5 @@
 #* USER CONFIGURATION
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 let
   #home-manager = builtins.fetchTarball {
   #  url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
@@ -18,7 +18,7 @@ in
 
   #* Define a user account. 
   #!Don't forget to set a password with ‘passwd’.
-  users.users.skuld = {
+  users.users.${username} = {
     isNormalUser = true;
     initialPassword = "y";
     shell = pkgs.zsh;

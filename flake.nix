@@ -13,7 +13,7 @@
     let
       system = "x86_64-linux";
       hostname = "nexos";
-      user = "skuld";
+      username = "skuld";
 
       pkgs = import nixpkgs {
         inherit system;
@@ -26,7 +26,7 @@
     {
       nixosConfigurations = {
         ${hostname} = nixpkgs.lib.nixosSystem {
-          inherit pkgs system;
+          inherit pkgs system username;
 
           modules = [
             ./system/configuration.nix
@@ -34,7 +34,7 @@
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
-                users.${user} = ./system/home.nix;
+                users.${username} = ./system/home.nix;
               };
             }
           ];
