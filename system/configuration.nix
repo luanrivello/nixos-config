@@ -23,7 +23,7 @@ in
     ./networking.nix
     ./desktop.nix
     ./sound.nix
-    ./user.nix {inherit username;}
+    ./user.nix
   ];
 
   #! DONT CHANGE THIS VALUE
