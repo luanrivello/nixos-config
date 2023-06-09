@@ -20,9 +20,8 @@
     ./boot.nix
     ./networking.nix
     ./desktop.nix
-    #./user.nix
+    ./user.nix
     ./sound.nix
-    <home-manager/nixos>
   ];
 
   #! DONT CHANGE THIS VALUE
