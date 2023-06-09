@@ -10,7 +10,7 @@ in
   imports = [
     #./home-manager.nix
     #(import "${home-manager}/nixos")
-    <home-manager/nixos>
+    #<home-manager/nixos>
   ];
 
   #TODO dev enviroment
