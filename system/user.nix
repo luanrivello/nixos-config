@@ -5,7 +5,6 @@ let
   #  url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   #  sha256 = "1hq625rvzamfkg2g1cn7jlp76kc4hxa8wk4l6y9xx19mdzz6yi21";
   #};
-  inherit username;
 in
 {
   imports = [
