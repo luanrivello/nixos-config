@@ -19,7 +19,7 @@
         inherit system;
         config.allowUnfree = true;
       };
-      
+
       #lib = nixpkgs.lib;
 
     in
@@ -27,18 +27,18 @@
       nixosConfigurations = {
         ${hostname} = nixpkgs.lib.nixosSystem {
           inherit pkgs system;
+
           modules = [
             ./system/configuration.nix
+            home-manager.nixosModules.home-manager {
+              home-manager = {
+                useUserPackages = true;
+                useGlobasPkgs = true;
+                users.${user} = ./system/user.nix;
+              };
+            }
           ];
-        };
-      };
 
-      homeConfigurations = {
-        ${user} = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./system/user.nix
-          ];
         };
       };
 
