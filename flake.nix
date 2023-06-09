@@ -20,17 +20,27 @@
         config.allowUnfree = true;
       };
       
-      lib = nixpkgs.lib;
+      #lib = nixpkgs.lib;
 
     in
     {
       nixosConfigurations = {
-        ${hostname} = lib.nixosSystem {
+        ${hostname} = nixpkgs.lib.nixosSystem {
           inherit pkgs system;
           modules = [
             ./system/configuration.nix
           ];
         };
       };
+
+      homeConfigurations = {
+        ${user} = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./system/user.nix
+          ];
+        };
+      };
+
     };
 }

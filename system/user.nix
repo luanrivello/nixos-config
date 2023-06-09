@@ -1,16 +1,16 @@
 #* USER CONFIGURATION
 { pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-    sha256 = "1hq625rvzamfkg2g1cn7jlp76kc4hxa8wk4l6y9xx19mdzz6yi21";
-  };
+  #home-manager = builtins.fetchTarball {
+  #  url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  #  sha256 = "1hq625rvzamfkg2g1cn7jlp76kc4hxa8wk4l6y9xx19mdzz6yi21";
+  #};
 in
 {
   imports = [
     #./home-manager.nix
-    (import "${home-manager}/nixos")
-    #<home-manager/nixos>
+    #(import "${home-manager}/nixos")
+    <home-manager/nixos>
   ];
 
   #TODO dev enviroment
@@ -66,12 +66,12 @@ in
           #*Internet
           brave
           librewolf
-          tor-browser-bundle-bin
-          steam
-          discord
-          lbry
-          qbittorrent
-          vscode
+          #tor-browser-bundle-bin
+          #steam
+          #discord
+          #lbry
+          #qbittorrent
+          #vscode
 
           #*Desktop
           polybar
@@ -82,15 +82,15 @@ in
           xplr
 
           #*Utils
-          onlyoffice-bin
-          epdfview
-          calibre
-          krita
-          gimp-with-plugins
-          gcolor3
-          notion-app-enhanced
-          keepassxc
-          gparted
+          #onlyoffice-bin
+          #epdfview
+          #calibre
+          #krita
+          #gimp-with-plugins
+          #gcolor3
+          #notion-app-enhanced
+          #keepassxc
+          #gparted
 
         ];
 
