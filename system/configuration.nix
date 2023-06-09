@@ -14,7 +14,6 @@
 #? nix-env --delete-generations 90d
 {
   #* Import Modules
-  _module.args.username = "skuld";
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
