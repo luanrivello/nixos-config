@@ -22,6 +22,7 @@
     ./desktop.nix
     #./user.nix
     ./sound.nix
+    <home-manager/nixos>
   ];
 
   #! DONT CHANGE THIS VALUE
