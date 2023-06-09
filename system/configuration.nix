@@ -21,6 +21,7 @@
     ./networking.nix
     ./desktop.nix
     ./sound.nix
+    ./user.nix
   ];
 
   #! DONT CHANGE THIS VALUE
