@@ -12,18 +12,16 @@
 #? nixos-rebuild switch --upgrade
 #? sudo nix-collect-garbage -d
 #? nix-env --delete-generations 90d
-let
-  username = "skuld";
-in
 {
   #* Import Modules
+  _modue.args.username = "skuld";
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
     ./networking.nix
     ./desktop.nix
     ./sound.nix
-    (import ./user.nix (args {inherit username;}))
+    ./user.nix
   ];
 
   #! DONT CHANGE THIS VALUE
