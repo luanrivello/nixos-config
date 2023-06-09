@@ -31,7 +31,11 @@
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager {
-              home-manager = ./system/home.nix;
+              home-manager = {
+                useUserPackages = true;
+                useGlobalPkgs = true;
+                users.${user} = ./system/home.nix;
+              };
             }
           ];
 
