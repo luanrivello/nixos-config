@@ -31,7 +31,7 @@
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager {
-              home-manager = ./system/user.nix;
+              home-manager = ./system/home.nix;
             }
           ];
 
