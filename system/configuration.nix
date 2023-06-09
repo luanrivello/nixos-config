@@ -2,7 +2,7 @@
 #* your system.  Help is available in the configuration.nix(5) man page
 #* and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, username, ... }:
+{ config, pkgs, ... }:
 
 #? nixos-install
 #? nixos-rebuild switch
@@ -12,7 +12,9 @@
 #? nixos-rebuild switch --upgrade
 #? sudo nix-collect-garbage -d
 #? nix-env --delete-generations 90d
-
+let
+  username = "skud";
+in
 {
   #* Import Modules
   imports = [

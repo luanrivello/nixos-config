@@ -26,7 +26,7 @@
     {
       nixosConfigurations = {
         ${hostname} = nixpkgs.lib.nixosSystem {
-          inherit pkgs system username;
+          inherit pkgs system;
 
           modules = [
             ./system/configuration.nix
