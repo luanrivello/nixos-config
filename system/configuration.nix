@@ -23,7 +23,7 @@ in
     ./networking.nix
     ./desktop.nix
     ./sound.nix
-    ./user.nix
+    (import ./user.nix (args {inherit username;}))
   ];
 
   #! DONT CHANGE THIS VALUE
