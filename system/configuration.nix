@@ -13,7 +13,7 @@
 #? sudo nix-collect-garbage -d
 #? nix-env --delete-generations 90d
 let
-  username = "skud";
+  username = "skuld";
 in
 {
   #* Import Modules
