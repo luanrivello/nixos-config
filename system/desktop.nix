@@ -13,7 +13,7 @@
     displayManager = {
       lightdm.enable = true;
       lightdm.greeters.slick.enable = true;
-      lightdm.background = "pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath";
+      lightdm.background = pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath;
 
       defaultSession = "none+bspwm";
     };
