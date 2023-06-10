@@ -13,6 +13,8 @@
     displayManager = {
       lightdm.enable = true;
       lightdm.greeters.slick.enable = true;
+      lightdm.background = "/home/skuld/Interface/wallpapers/raining-gun_waifu2x_noise1_scale4x.png";
+
       defaultSession = "none+bspwm";
     };
 
