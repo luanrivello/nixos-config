@@ -14,7 +14,6 @@
       lightdm.enable = true;
       lightdm.greeters.slick.enable = true;
       lightdm.greeters.slick.font.name = "Fira Code Nerd Font";
-      lightdm.greeters.slick.draw-user-backgrounds = true;
       lightdm.background = "/usr/share/backgrounds/lightdm.png";
 
       defaultSession = "none+bspwm";
