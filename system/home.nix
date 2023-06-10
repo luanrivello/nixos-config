@@ -31,6 +31,7 @@ in
       #*Internet
       brave
       librewolf
+      firefox
       tor-browser-bundle-bin
       steam
       discord
