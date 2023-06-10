@@ -26,11 +26,11 @@
 
   #! DONT CHANGE THIS VALUE
   system.stateVersion = "22.11"; #? Did you read the comment?
+  system.autoUgrade = {
+    enable = true;
+    dates = "weekly";
+  };
 
-  #TODO system.autoUgrade = {
-  #  enable = true;
-  #  channel = "";
-  #}
   nix = {
     #* Flakes
     package = pkgs.nixFlakes;
