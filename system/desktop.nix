@@ -13,7 +13,7 @@
     displayManager = {
       lightdm.enable = true;
       lightdm.greeters.slick.enable = true;
-      lightdm.background = "/usr/share/backgrounds/lightdm.jpg";
+      lightdm.background = "/usr/share/backgrounds/lightdm.png";
 
       defaultSession = "none+bspwm";
     };
