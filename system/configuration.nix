@@ -41,7 +41,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 40d";
     };
   };
 
@@ -102,8 +102,7 @@
     };
   };
 
-  #* List packages installed in system profile. To search, run:
-  #* $ nix search wget
+  #* Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
 
