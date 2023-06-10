@@ -22,7 +22,6 @@
     ./desktop.nix
     ./sound.nix
     ./user.nix
-    ./firefox.nix
   ];
 
   #! DONT CHANGE THIS VALUE
