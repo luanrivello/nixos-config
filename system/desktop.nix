@@ -1,9 +1,7 @@
 #* DESKTOP ENVIRONMENT
 { ... }:
-
 {
-  #? Use wayland when supported ?
-  #* Enable the X11 windowing system.
+  #* Enable the X11 windowing system
   services.xserver.enable = true;
   services.xserver = {
     #* Configure keymap in X11
@@ -21,5 +19,4 @@
     windowManager.bspwm.enable = true;
 
   };
-
 }

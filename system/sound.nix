@@ -1,8 +1,7 @@
 #* SOUND
 { ... }:
-
 {
-  #* Enable sound.
+  #* Enable sound
   sound.enable = true;
   security.rtkit.enable = true;
   hardware.pulseaudio.enable = false;

@@ -8,8 +8,8 @@ in
 {
   #* Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
   nixpkgs.config.allowUnfree = true;
+
   home = {
     stateVersion = "22.11";
 
@@ -31,12 +31,12 @@ in
       #*Internet
       brave
       librewolf
-      #tor-browser-bundle-bin
-      #steam
-      #discord
-      #lbry
-      #qbittorrent
-      #vscode
+      tor-browser-bundle-bin
+      steam
+      discord
+      lbry
+      qbittorrent
+      vscode
 
       #*Desktop
       polybar
@@ -72,6 +72,6 @@ in
       #POLYBAR
       #"${config}/polybar/config.ini".source = "${dotfiles}/polybar/.config/polybar/config.ini";
     };
-  };
 
+  };
 }

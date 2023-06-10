@@ -22,7 +22,6 @@
         inherit system;
         config.allowUnfree = true;
       };
-
     in
     {
       nixosConfigurations = {
