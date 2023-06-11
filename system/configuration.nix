@@ -113,7 +113,7 @@
     wget
     git
     man
-    #file
+    file
     #stow
     #killall
 
