@@ -36,12 +36,12 @@ in
       discord
       lbry
       qbittorrent
-      vscode
+      #vscode
 
       #*Desktop
       polybar
       rofi
-      stow
+      #stow
       feh
       (nnn.override { withNerdIcons = true; })
       
