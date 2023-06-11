@@ -36,6 +36,7 @@ in
       discord
       lbry
       qbittorrent
+      git
       #vscode
 
       #*Desktop
