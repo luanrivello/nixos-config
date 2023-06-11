@@ -26,7 +26,7 @@
 
   #! DONT CHANGE THIS VALUE
   system.stateVersion = "22.11"; #? Did you read the comment?
-  system.autoUgrade = {
+  system.autoUpgrade = {
     enable = true;
     dates = "weekly";
   };
@@ -107,23 +107,23 @@
   environment.systemPackages = with pkgs; [
 
     #*Terminal
-    alacritty
-    neovim
+    #alacritty
+    #neovim
     htop
     wget
     git
     man
-    file
-    stow
-    killall
+    #file
+    #stow
+    #killall
 
     #*Internet
     #firefox
     #dolphin
 
     #*Desktop
-    xorg.xkill
-    xorg.xrandr
+    #xorg.xkill
+    #xorg.xrandr
     #picom
     #screenshoWiz
 

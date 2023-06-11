@@ -43,7 +43,6 @@ in
       rofi
       stow
       feh
-      nitrogen
       xplr
 
       #*Utils
