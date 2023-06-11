@@ -43,7 +43,7 @@ in
       rofi
       stow
       feh
-      (nnn.override { withNerdFonts = true; })
+      (nnn.override { withNerdIcons = true; })
       
 
       #*Utils
