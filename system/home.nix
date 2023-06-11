@@ -43,7 +43,8 @@ in
       rofi
       stow
       feh
-      xplr
+      nnn.override { withNerdIcons = true; }
+      
 
       #*Utils
       #onlyoffice-bin
