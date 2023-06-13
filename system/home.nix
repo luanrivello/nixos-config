@@ -1,4 +1,3 @@
-#* HOME-MANAGER CONFIGURATION
 { pkgs, ... }:
 let
   home = "/home/skuld/";
@@ -6,8 +5,7 @@ let
   dotfiles = "/home/skuld/nixos-config/user/.dotfiles";
 in
 {
-  #* Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
 
   home = {
