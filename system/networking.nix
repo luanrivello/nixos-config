@@ -1,10 +1,9 @@
-#* NETWORKING 
 { ... }:
 {
-  #* Define your hostname
   networking.hostName = "nexos"; 
 
   networking.networkmanager.enable = true;  
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ]; 
   # networking.wireless.enable = true; #? Enables wireless support via wpa_supplicant.
 
   #* Configure network proxy if necessary
