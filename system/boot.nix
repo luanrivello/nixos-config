@@ -1,11 +1,5 @@
-#* BOOT LOADER
 { pkgs, ... }:
 {
-  #* EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
-
-  #* GRUB 2 boot loader.
   boot.loader.grub = {
     enable = true;
     device = "/dev/sda";
