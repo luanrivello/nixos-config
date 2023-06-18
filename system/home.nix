@@ -43,7 +43,8 @@ in
       #stow
       feh
       (nnn.override { withNerdIcons = true; })
-      
+      dragon
+
 
       #*Utils
       #onlyoffice-bin
