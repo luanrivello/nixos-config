@@ -17,6 +17,7 @@ in
       neofetch
       ripgrep
       ripgrep-all
+      ImageMagick
       neovim
       gotop #bashtop
       ncdu
@@ -46,6 +47,8 @@ in
       devour
       mpv-unwrapped
       (nnn.override { withNerdIcons = true; })
+      nvimpager
+      ffmpeg
       ffmpegthumbnailer
       dragon
       neo
