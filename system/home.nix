@@ -46,6 +46,7 @@ in
       devour
       mpv-unwrapped
       (nnn.override { withNerdIcons = true; })
+      ffmpeg
       dragon
       neo
 
