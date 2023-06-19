@@ -24,7 +24,7 @@ in
       tldr
       exa
       bat
-      mpv
+      mpv-unwrapped
       fd
 
       #*Internet
