@@ -17,7 +17,7 @@ in
       neofetch
       ripgrep
       ripgrep-all
-      ImageMagick
+      imagemagick
       neovim
       gotop #bashtop
       ncdu
