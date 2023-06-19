@@ -18,14 +18,14 @@ in
       ripgrep
       ripgrep-all
       neovim
-      devour
       gotop #bashtop
       ncdu
       tldr
       exa
       bat
-      mpv-unwrapped
       fd
+      stow
+      git
 
       #*Internet
       brave
@@ -43,7 +43,11 @@ in
       rofi
       #stow
       feh
+      devour
+      mpv-unwrapped
       (nnn.override { withNerdIcons = true; })
+      dragon
+      neo
 
 
       #*Utils
