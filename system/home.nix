@@ -24,6 +24,7 @@ in
       tldr
       exa
       bat
+      mpv
       fd
 
       #*Internet
