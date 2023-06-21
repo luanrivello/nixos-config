@@ -21,18 +21,16 @@
       windowManager.bspwm.enable = true;
     };
 
-    picom.seettings = ''
+    picom.seettings = {
       #################################
       #          Animations           #
       #################################
-      # requires https://github.com/jonaburg/picom
-      # (These are also the default values)
-      transition-length = 300
-      transition-pow-x = 0.1
-      transition-pow-y = 0.1
-      transition-pow-w = 0.1
-      transition-pow-h = 0.1
-      size-transition = true
+      transition-length = 300;
+      transition-pow-x = 0.1;
+      transition-pow-y = 0.1;
+      transition-pow-w = 0.1;
+      transition-pow-h = 0.1;
+      size-transition = true;
 
 
       #################################
@@ -42,16 +40,13 @@
       corner-radius = 10.0;
       rounded-corners-exclude = [
         #"window_type = 'normal'",
-        "class_g = 'awesome'",
-        "class_g = 'URxvt'",
-        "class_g = 'XTerm'",
-        "class_g = 'kitty'",
-        "class_g = 'Alacritty'",
-        "class_g = 'Polybar'",
-        "class_g = 'code-oss'",
+        "class_g = 'URxvt'"
+        "class_g = 'XTerm'"
+        "class_g = 'kitty'"
+        "class_g = 'Alacritty'"
+        "class_g = 'Polybar'"
+        "class_g = 'code-oss'"
         #"class_g = 'TelegramDesktop'",
-        "class_g = 'firefox'",
-        "class_g = 'Thunderbird'"
       ];
       round-borders = 1;
       round-borders-exclude = [
@@ -122,13 +117,9 @@
       #
       # shadow-exclude = []
       shadow-exclude = [
-      "name = 'Notification'",
-      "class_g = 'Conky'",
-      "class_g ?= 'Notify-osd'",
-      "class_g = 'Cairo-clock'",
-      "class_g = 'slop'",
-      "class_g = 'Polybar'",
-      "_GTK_FRAME_EXTENTS@:c"
+        "name = 'Notification'"
+        "class_g = 'Polybar'"
+        "_GTK_FRAME_EXTENTS@:c"
       ];
 
       # Specify a X geometry that describes the region in which shadow should not
@@ -140,7 +131,7 @@
 
       # Crop shadow of a window fully on a particular Xinerama screen to the screen.
       # xinerama-shadow-crop = false
-    '';
+    };
   };
 }
 
