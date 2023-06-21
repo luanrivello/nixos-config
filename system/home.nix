@@ -50,7 +50,7 @@ in
       nvimpager
       ffmpeg
       ffmpegthumbnailer
-      dragon
+      xdragon
       neo
 
 
