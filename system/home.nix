@@ -45,7 +45,7 @@ in
       #stow
       feh
       devour
-      mpv-unwrapped
+      mpv
       (nnn.override { withNerdIcons = true; })
       nvimpager
       ffmpeg
