@@ -115,7 +115,7 @@
     man
     file
     #stow
-    #killall
+    killall
 
     #*Internet
     #firefox
