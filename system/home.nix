@@ -46,6 +46,7 @@ in
       feh
       devour
       mpv
+      xdg-utils
       xorg.xkill
       (nnn.override { withNerdIcons = true; })
       nvimpager
