@@ -32,7 +32,6 @@ in
       brave
       librewolf
       tor-browser-bundle-bin
-      steam
       discord
       lbry
       qbittorrent
