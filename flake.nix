@@ -35,7 +35,7 @@
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
-                users.${username} = ./system/home.nix;
+                users.${username} = ./user/home.nix;
               };
             }
           ];
