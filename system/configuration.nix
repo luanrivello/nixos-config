@@ -17,9 +17,9 @@
   #* Import Modules
   imports = [
     ./hardware-configuration.nix
-    ./boot.nix
+    ./boot/grub.nix
     ./networking.nix
-    ./desktop.nix
+    ./desktop/bspwm.nix
     ./sound.nix
     ./user.nix
   ];
