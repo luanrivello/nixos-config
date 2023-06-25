@@ -46,6 +46,7 @@ in
       feh
       devour
       mpv
+      xorg.xkill
       (nnn.override { withNerdIcons = true; })
       nvimpager
       ffmpeg
