@@ -70,6 +70,10 @@ in
     ];
 
     file = {
+      #"${home}/.config" = {
+      #  recursive = true;
+      #  source = "${dotfiles}";
+      #}; 
       #ALIASES
       #"${home}/.aliases".source = "${dotfiles}/enviroment/.aliases";
 
