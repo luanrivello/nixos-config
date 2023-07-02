@@ -43,6 +43,8 @@ in
       rofi
       #stow
       feh
+      #sxiv
+      #nitrogen
       devour
       mpv
       xdg-utils

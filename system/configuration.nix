@@ -18,8 +18,8 @@
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
-    ./networking.nix
     ./desktop/bspwm.nix
+    ./networking.nix
     ./sound.nix
     ./user.nix
   ];
@@ -69,9 +69,6 @@
 
   #* Enable CUPS to print documents.
   #? services.printing.enable = true;
-
-  #TODO Bluetooth
-  #services.blueman.enable = true;
 
   #* Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
