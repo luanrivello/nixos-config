@@ -16,6 +16,7 @@
     ./boot/grub.nix
     ./desktop/bspwm.nix
     ./networking.nix
+    ./printer.nix
     ./sound.nix
     ./user.nix
   ];
