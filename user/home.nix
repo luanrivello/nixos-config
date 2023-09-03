@@ -67,6 +67,7 @@ in
       #notion-app-enhanced
       #keepassxc
       #gparted
+      #anki
 
     ];
 
