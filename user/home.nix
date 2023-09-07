@@ -11,7 +11,7 @@ in
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style.name = "adwaita-dark";
+    #style.name = "adwaita-dark";
   };
 
   gtk = {
@@ -26,6 +26,10 @@ in
     iconTheme.name = "Tela";
   };                                
                                     
+  home.sessionVariables = {
+    GTK_USER_PORTAL = 1;
+  };
+
   home = {                          
     stateVersion = "22.11";         
                                     
