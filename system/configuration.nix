@@ -2,12 +2,13 @@
 
 #? nixos-install
 #? nixos-rebuild switch
+#? nix-shell -p
 #? nix-env -iA <name>
 #? nix-env -q
+#? nix-env --delete-generations 90d
 #? nix-channel --update
 #? nixos-rebuild switch --upgrade
 #? sudo nix-collect-garbage -d
-#? nix-env --delete-generations 90d
 
 {
   #* Import Modules
