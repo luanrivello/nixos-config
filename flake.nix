@@ -13,34 +13,34 @@
   };
 
   outputs = { self, nixpkgs, home-manager }:
-    let
-      system = "x86_64-linux";
-      hostname = "nexos";
-      username = "skuld";
+  let
+    system = "x86_64-linux";
+    hostname = "nexos";
+    username = "skuld";
 
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    in
-    {
-      nixosConfigurations = {
-        ${hostname} = nixpkgs.lib.nixosSystem {
-          inherit pkgs system;
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in
+  {
+    nixosConfigurations = {
+      ${hostname} = nixpkgs.lib.nixosSystem {
+        inherit pkgs system;
 
-          modules = [
-            ./system/configuration.nix
+        modules = [
+          ./system/configuration.nix
 
-            home-manager.nixosModules.home-manager {
-              home-manager = {
-                useUserPackages = true;
-                useGlobalPkgs = true;
-                users.${username} = ./user/home.nix;
-              };
-            }
-          ];
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+              users.${username} = ./user/home.nix;
+            };
+          }
+        ];
 
-        };
       };
     };
+  };
 }
