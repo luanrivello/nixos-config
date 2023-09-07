@@ -20,7 +20,7 @@ in
     cursorTheme.name = "Bibata-Modern-Classic";
     
     theme.package = pkgs.adw-gtk3;  
-    theme.package = "adw-gtk3-dark";  
+    theme.name = "adw-gtk3-dark";  
     
     iconTheme.package = gruvboxPlus;
     iconTheme.name = "GruvboxPlus";
