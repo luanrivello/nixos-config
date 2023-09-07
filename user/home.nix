@@ -22,8 +22,8 @@ in
     theme.package = pkgs.adw-gtk3;  
     theme.name = "adw-gtk3-dark";  
     
-    iconTheme.package = pkgs.gruvboxPlus;
-    iconTheme.name = "GruvboxPlus";
+    iconTheme.package = pkgs.tela-icon-theme;
+    iconTheme.name = "tela-icon-theme";
   };                                
                                     
   home = {                          
