@@ -1,26 +1,15 @@
 { pkgs }:
-
-let
-  imgLink = "https://raw.githubusercontent.com/luanrivello/.dotfiles/main/interface/Interface/wallpapers/d_jod1lXsVCEtLhFFnzvrSqsgkj0P_6jAIYEa7UNXHI.jpg";
-
-  image = pkgs.fetchurl {
-    url = imgLink;
-    sha256 = "sha256-/D3bNd4nOTRuHFbCyMNF3aLVsm/sGSN7xSWHPb4fqtc";
-  };
-in
 pkgs.stdenv.mkDerivation {
-  name = "sddm-theme";
+  name = "tartarus-grub";
   src = pkgs.fetchFromGitHub {
-    owner = "MarianArlt";
-    repo = "sddm-sugar-dark";
-    rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
-    sha256 = "0153z1kylbhc9d12nxy9vpn0spxgrhgy36wy37pk6ysq7akaqlvy";
+    owner = "AllJavi";
+    repo = "tartarus-grub";
+    rev = "";
+    sha256 = "";
   };
+
   installPhase = ''
     mkdir -p $out
-    cp -R ./* $out/
-    cd $out/
-    rm Background.jpg
-    cp -r ${image} $out/Background.jpg
-   '';
+    cp -R .tartarus/* $out/
+  '';
 }
