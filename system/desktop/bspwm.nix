@@ -8,10 +8,12 @@
       xkbOptions = "caps:swapescape";
 
       displayManager = {
-        lightdm.enable = true;
-        lightdm.greeters.slick.enable = true;
-        lightdm.greeters.slick.font.name = "Fira Code Nerd Font";
-        lightdm.background = "/usr/share/backgrounds/lightdm.png";
+        #lightdm.enable = true;
+        #lightdm.greeters.slick.enable = true;
+        #lightdm.greeters.slick.font.name = "Fira Code Nerd Font";
+        #lightdm.background = "/usr/share/backgrounds/lightdm.png";
+        sddm.enable = true;
+        sddm.theme = "${import ./sddm-theme.nix {inherit pkgs; }}";
 
         defaultSession = "none+bspwm";
       };
