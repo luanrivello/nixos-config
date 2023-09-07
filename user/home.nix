@@ -16,6 +16,8 @@ in
 
   gtk = {
     enable = true;
+    cursorTheme.package = pkgs.bibata-cursors;
+    cursorTheme.name = "Bibata-Modern-Classic";
   };
 
   home = {
@@ -25,8 +27,8 @@ in
       #*Core
       alacritty
       neofetch
-      ripgrep
-      ripgrep-all
+      #ripgrep
+      #ripgrep-all
       imagemagick
       neovim
       gotop #bashtop
