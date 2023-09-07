@@ -18,35 +18,41 @@ in
     enable = true;
     cursorTheme.package = pkgs.bibata-cursors;
     cursorTheme.name = "Bibata-Modern-Classic";
-  };
-
-  home = {
-    stateVersion = "22.11";
-
-    packages = with pkgs; [
-      #*Core
-      alacritty
-      neofetch
-      #ripgrep
-      #ripgrep-all
-      imagemagick
-      neovim
-      gotop #bashtop
-      ncdu
-      tldr
-      exa
-      bat
-      fd
-      stow
-      git
-
-      #*Internet
-      brave
-      librewolf
-      tor-browser-bundle-bin
-      discord
-      lbry
-      qbittorrent
+    
+    theme.package = pkgs.adw-gtk3;  
+    theme.package = "adw-gtk3-dark";  
+    
+    iconTheme.package = gruvboxPlus;
+    iconTheme.name = "GruvboxPlus";
+  };                                
+                                    
+  home = {                          
+    stateVersion = "22.11";         
+                                    
+    packages = with pkgs; [         
+      #*Core                        
+      alacritty                     
+      neofetch                      
+      #ripgrep                      
+      #ripgrep-all                  
+      imagemagick                   
+      neovim                        
+      gotop #bashtop                
+      ncdu                          
+      tldr                          
+      exa                           
+      bat                           
+      fd                            
+      stow                          
+      git                           
+                                    
+      #*Internet                    
+      brave                         
+      librewolf                     
+      tor-browser-bundle-bin        
+      discord                       
+      lbry                          
+      qbittorrent                   
       git
       #vscode
 
