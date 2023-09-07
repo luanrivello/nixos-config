@@ -81,11 +81,11 @@
 
   #*Fonts
   fonts = {
-    fonts = with pkgs; [
+    enableDefaultPackages = true;
+    packages = with pkgs; [
       (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
       ibm-plex
     ];
-    enableDefaultFonts = true;
     fontconfig.defaultFonts = {
       serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
       sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
