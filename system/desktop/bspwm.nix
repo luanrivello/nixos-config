@@ -1,4 +1,7 @@
 { ... }:
+let
+  sddm-theme = "${import ./sddm-sugar-dark.nix { inherit pkgs; }}";
+in
 {
   services = {
     xserver.enable = true;
@@ -13,7 +16,7 @@
         #lightdm.greeters.slick.font.name = "Fira Code Nerd Font";
         #lightdm.background = "/usr/share/backgrounds/lightdm.png";
         sddm.enable = true;
-        sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+        sddm.theme = sddm-theme;
 
         defaultSession = "none+bspwm";
       };
