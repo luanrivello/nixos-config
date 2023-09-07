@@ -22,7 +22,7 @@ in
     theme.package = pkgs.adw-gtk3;  
     theme.name = "adw-gtk3-dark";  
     
-    iconTheme.package = gruvboxPlus;
+    iconTheme.package = pkgs.gruvboxPlus;
     iconTheme.name = "GruvboxPlus";
   };                                
                                     
