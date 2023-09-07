@@ -3,7 +3,7 @@ let
   sddm-theme = "${import ./sddm-sugar-dark.nix { inherit pkgs; }}";
 in
 {
-  services.displayManager = {
+  services.xserver.displayManager = {
         sddm.enable = true;
         sddm.theme = sddm-theme;
   };

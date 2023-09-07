@@ -1,6 +1,6 @@
 { ... }:
 {
-  services.displayManager = {
+  services.xserver.displayManager = {
     lightdm.enable = true;
     lightdm.greeters.slick.enable = true;
     lightdm.greeters.slick.font.name = "Fira Code Nerd Font";
