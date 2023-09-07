@@ -41,7 +41,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "+";
+      options = "+5";
     };
   };
 
