@@ -1,6 +1,9 @@
 { ... }:
 {
   services = {
+    
+    programs.dconf.enable = true;
+    
     xserver.enable = true;
     xserver = {
       layout = "us";

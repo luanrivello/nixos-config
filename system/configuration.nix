@@ -6,6 +6,7 @@
 #? nix-env -iA <name>
 #? nix-env -q
 #? nix-env --delete-generations 90d
+#? nix-store --gc 
 #? sudo nix-collect-garbage -d
 #? nix-channel --update
 #? nixos-rebuild switch --upgrade
