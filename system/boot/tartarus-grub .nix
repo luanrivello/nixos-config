@@ -4,8 +4,8 @@ pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "AllJavi";
     repo = "tartarus-grub";
-    rev = "";
-    sha256 = "";
+    rev = "b116360a2a0991062a4d728cb005dfd309fbb82a";
+    sha256 = null;
   };
 
   installPhase = ''
