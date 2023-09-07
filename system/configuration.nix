@@ -18,6 +18,7 @@
     ./hardware-configuration.nix
     ./boot/grub.nix
     ./desktop/bspwm.nix
+    ./desktop/sddm.nix
     ./modules/printer.nix
     ./modules/sound.nix
     ./networking.nix
