@@ -25,10 +25,6 @@ in
     iconTheme.package = pkgs.tela-icon-theme;
     iconTheme.name = "Tela-orange";
   };                                
-                                    
-  home.sessionVariables = {
-    GTK_USER_PORTAL = 1;
-  };
 
   home = {                          
     stateVersion = "22.11";         
