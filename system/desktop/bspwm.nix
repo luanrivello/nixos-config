@@ -23,7 +23,12 @@ in
 
       windowManager.bspwm.enable = true;
     };
-
   };
+
+  #sddm
+  enviroment.systemPackages = with pkgs.libsForQt5.qt5; [
+    qtquickcontrols2
+    qtgraphicaleffects
+  ];
 }
 
