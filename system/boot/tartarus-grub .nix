@@ -10,6 +10,6 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out
-    cp -R tartarus/* $out/
+    cp -R ./* $out/
   '';
 }
