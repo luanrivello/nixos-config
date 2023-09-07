@@ -8,6 +8,16 @@ in
   programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
 
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style.name = "adwaita-dark";
+  };
+
+  gtk = {
+    enable = true;
+  };
+
   home = {
     stateVersion = "22.11";
 
