@@ -1,8 +1,10 @@
 { pkgs }:
 
 let
+  imgLink = "https://raw.githubusercontent.com/luanrivello/.dotfiles/main/interface/Interface/wallpapers/d_jod1lXsVCEtLhFFnzvrSqsgkj0P_6jAIYEa7UNXHI.jpg";
+
   image = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/luanrivello/.dotfiles/main/interface/Interface/wallpapers/d_jod1lXsVCEtLhFFnzvrSqsgkj0P_6jAIYEa7UNXHI.jpg";
+    url = imgLink;
     sha256 = "sha256-/D3bNd4nOTRuHFbCyMNF3aLVsm/sGSN7xSWHPb4fqtc";
   };
 in
