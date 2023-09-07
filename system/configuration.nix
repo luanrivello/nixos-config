@@ -6,9 +6,10 @@
 #? nix-env -iA <name>
 #? nix-env -q
 #? nix-env --delete-generations 90d
+#? sudo nix-collect-garbage -d
 #? nix-channel --update
 #? nixos-rebuild switch --upgrade
-#? sudo nix-collect-garbage -d
+#? sudo nixos-rebuild switch --flake '#nexos'
 
 {
   #* Import Modules
@@ -78,18 +79,18 @@
   }];
 
   #*Fonts
-  fonts = {
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
-      ibm-plex
-    ];
-    enableDefaultFonts = true;
-    fontconfig.defaultFonts = {
-      serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
-      sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
-      monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
-    };
-  };
+  #fonts = {
+  #  fonts = with pkgs; [
+  #    (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
+  #    ibm-plex
+  #  ];
+  #  enableDefaultFonts = true;
+  #  fontconfig.defaultFonts = {
+  #    serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
+  #    sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
+  #    monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
+  #  };
+  #};
 
   #* Packages
   nixpkgs.config.allowUnfree = true;
