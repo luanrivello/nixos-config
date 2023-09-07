@@ -23,7 +23,7 @@ in
     theme.name = "adw-gtk3-dark";  
     
     iconTheme.package = pkgs.tela-icon-theme;
-    iconTheme.name = "tela-icon-theme";
+    iconTheme.name = "Tela-black";
   };                                
                                     
   home = {                          
