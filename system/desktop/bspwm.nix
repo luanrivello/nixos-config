@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs }:
 let
   sddm-theme = sddm-theme;
 in
