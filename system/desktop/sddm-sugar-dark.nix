@@ -2,7 +2,7 @@
 let
   image = pkgs.fetchurl {
     url = "https://github.com/luanrivello/.dotfiles/blob/main/interface/Interface/wallpapers/d_jod1lXsVCEtLhFFnzvrSqsgkj0P_6jAIYEa7UNXHI.jpg";
-    sha256 = "";
+    sha256 = "sha256-fl0spjpYezPvGZ6b4R/Mr18N7N3JdytCSwwu6mf4owQ";
   };
 in
 pkgs.stdenv.mkDerivation {
