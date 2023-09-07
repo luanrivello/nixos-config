@@ -11,7 +11,7 @@ in
   qt = {
     enable = true;
     platformTheme = "gtk";
-    #style.name = "adwaita-dark";
+    style.name = "adwaita-dark";
   };
 
   gtk = {
@@ -23,7 +23,7 @@ in
     theme.name = "adw-gtk3-dark";  
     
     iconTheme.package = pkgs.tela-icon-theme;
-    iconTheme.name = "Tela";
+    iconTheme.name = "Tela-orange";
   };                                
                                     
   home.sessionVariables = {
