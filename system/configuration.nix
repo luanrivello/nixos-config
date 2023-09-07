@@ -107,4 +107,7 @@
     #stow
     killall
   ];
+
+  #* Programs
+  programs.dconf.enable = true;
 }
