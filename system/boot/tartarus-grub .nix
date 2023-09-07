@@ -1,6 +1,7 @@
 { pkgs }:
 pkgs.stdenv.mkDerivation {
   name = "tartarus-grub";
+
   src = pkgs.fetchFromGitHub {
     owner = "AllJavi";
     repo = "tartarus-grub";

@@ -8,6 +8,7 @@ let
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
+
   src = pkgs.fetchFromGitHub {
     owner = "MarianArlt";
     repo = "sddm-sugar-dark";
