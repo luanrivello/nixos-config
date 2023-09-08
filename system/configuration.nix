@@ -46,7 +46,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LANGUAGE = "en_US.UTF-8";
-    LC_ALL = "pt_BR.UTF-8";
+    LC_ALL = null;
     LC_ADDRESS = "pt_BR.UTF-8";
     LC_IDENTIFICATION = "pt_BR.UTF-8";
     LC_MEASUREMENT = "pt_BR.UTF-8";
@@ -55,7 +55,7 @@
     LC_NUMERIC = "pt_BR.UTF-8";
     LC_PAPER = "pt_BR.UTF-8";
     LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "pt_BR.UTF-8";
+    LC_TIME = "ja_JP.UTF-8";
   };
 
   environment.binsh = "${pkgs.dash}/bin/dash";
