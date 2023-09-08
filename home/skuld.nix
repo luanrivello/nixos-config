@@ -5,24 +5,9 @@ let
   dotfiles = "/home/skuld/nixos-config/user/.dotfiles";
 in
 {
-
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style.name = "adwaita-dark";
-  };
-
-  gtk = {
-    enable = true;
-    cursorTheme.package = pkgs.bibata-cursors;
-    cursorTheme.name = "Bibata-Modern-Classic";
-    
-    theme.package = pkgs.adw-gtk3;  
-    theme.name = "adw-gtk3-dark";  
-    
-    iconTheme.package = pkgs.tela-icon-theme;
-    iconTheme.name = "Tela-orange";
-  };                                
+  imports = [
+    ./theme-eminence.nix
+  ];
 
   programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
