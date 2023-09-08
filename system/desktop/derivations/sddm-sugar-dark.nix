@@ -21,8 +21,9 @@ pkgs.stdenv.mkDerivation {
     cd $out/
     rm Background.jpg
     cp -r ${image} $out/Background.jpg
+    sed -i 's/HeaderText=Welcome!/HeaderText=お帰りなさい!/' theme.conf
     sed -i 's/Font="Noto Sans"/Font="Cascadia Code"/' theme.conf
-    sed -i 's/DateFormat="dddd, d of MMMM"/DateFormat="yyyy年 MMMM月 d日 ddd "/' theme.conf
+    sed -i 's/DateFormat="dddd, d of MMMM"/DateFormat="yyyy年 MMM月 d日 (ddd) "/' theme.conf
     sed -i 's/ForceHideCompletePassword=false/ForceHideCompletePassword=true/' theme.conf
   '';
 }
