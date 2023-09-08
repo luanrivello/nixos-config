@@ -1,11 +1,11 @@
 { pkgs, ... }:
 let
-  sddm-theme = "${import ./sddm-sugar-dark.nix { inherit pkgs; }}";
+  sugar-dark = "${import derivations/sddm-sugar-dark.nix { inherit pkgs; }}";
 in
 {
   services.xserver.displayManager = {
         sddm.enable = true;
-        sddm.theme = sddm-theme;
+        sddm.theme = sugar-dark;
   };
 
   environment.systemPackages = with pkgs.libsForQt5.qt5; [
