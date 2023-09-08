@@ -5,8 +5,6 @@ let
   dotfiles = "/home/skuld/nixos-config/user/.dotfiles";
 in
 {
-  programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
-  nixpkgs.config.allowUnfree = true;
 
   qt = {
     enable = true;
@@ -26,6 +24,8 @@ in
     iconTheme.name = "Tela-orange";
   };                                
 
+  programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
+  nixpkgs.config.allowUnfree = true;
   home = {                          
     stateVersion = "22.11";         
                                     

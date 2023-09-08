@@ -13,7 +13,6 @@
 #? sudo nixos-rebuild switch --flake '.#nexos'
 
 {
-  #* Import Modules
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
@@ -21,23 +20,20 @@
     ./desktop/sddm.nix
     ./modules/printer.nix
     ./modules/sound.nix
-    ./networking.nix
+    ./modules/networking.nix
     ./user.nix
   ];
 
-  #! DONT CHANGE THIS VALUE
-  system.stateVersion = "22.11"; #? Did you read the comment?
+  system.stateVersion = "22.11";
   system.autoUpgrade = {
     enable = true;
     dates = "weekly";
   };
 
   nix = {
-    #* Flakes
     package = pkgs.nixFlakes;
     extraOptions = "experimental-features = nix-command flakes";
 
-    #* Garbage Collection
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
@@ -46,10 +42,7 @@
     };
   };
 
-  #* Set your time zone.
   time.timeZone = "Etc/GMT-3";
-
-  #* Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
@@ -63,24 +56,23 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
+  environment.binsh = "${pkgs.dash}/bin/dash";
+  programs.zsh.enable = true;
   console = {
     font = "Lat2-Terminus16";
     keyMap = "dvorak";
   };
 
-  #* Shell
-  environment.binsh = "${pkgs.dash}/bin/dash";
-  programs.zsh.enable = true;
+  security = {
+    sudo.enable = false;
+    doas.enable = true;
 
-  #* Security
-  security.sudo.enable = false;
-  security.doas.enable = true;
-  security.doas.extraRules = [{
-    groups = [ "wheel" ];
-    keepEnv = true;
-  }];
+    doas.extraRules = [{
+      groups = [ "wheel" ];
+      keepEnv = true;
+    }];
+  };
 
-  #*Fonts
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -94,22 +86,21 @@
     };
   };
 
-  #* Packages
   nixpkgs.config.allowUnfree = true;
-  programs.steam.enable = true;
+  programs = {
+    steam.enable = true;
+    dconf.enable = true; #! GTK QT
+  };
   environment.systemPackages = with pkgs; [
-    #alacritty
-    #neovim
     htop
     wget
     git
     man
     file
-    #stow
     killall
+    #alacritty
+    #neovim
+    #stow
   ];
 
-
-  #* Programs
-  programs.dconf.enable = true; #! GTK 
 }
