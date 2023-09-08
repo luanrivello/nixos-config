@@ -28,7 +28,7 @@ in
       exa                           
       bat                           
       fd                            
-      stow                          
+      #stow                          
       git                           
                                     
       #*Internet                    
