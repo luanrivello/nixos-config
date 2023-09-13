@@ -9,7 +9,7 @@ in
     ./theme-eminence.nix
   ];
 
-  programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
   
   xdg.userDirs.enable = true;
