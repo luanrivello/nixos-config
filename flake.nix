@@ -33,8 +33,8 @@
 
           home-manager.nixosModules.home-manager {
             home-manager = {
-              useUserPackages = true;
               useGlobalPkgs = true;
+              useUserPackages = true;
               users.${username} = ./home/${username}.nix;
             };
           }

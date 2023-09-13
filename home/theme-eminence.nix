@@ -16,5 +16,5 @@
     
     iconTheme.package = pkgs.tela-icon-theme;
     iconTheme.name = "Tela-orange";
-  };                                
+  };                           
 }
