@@ -11,6 +11,10 @@ in
 
   programs.home-manager.enable = true; #? Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
+  
+  xdg.userDirs.enable = true;
+  xdg.userDirs.createDirectories = true;
+
   home = {                          
     stateVersion = "22.11";         
                                     
