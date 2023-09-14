@@ -29,7 +29,7 @@ in
       gotop #bashtop                
       ncdu                          
       tldr                          
-      exa                           
+      eza                           
       bat                           
       fd                            
       #stow                          

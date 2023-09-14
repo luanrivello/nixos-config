@@ -21,7 +21,6 @@
     ./modules/printer.nix
     ./modules/sound.nix
     ./modules/networking.nix
-    ./modules/nix-index.nix
     ./user.nix
   ];
 
