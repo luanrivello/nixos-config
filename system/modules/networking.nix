@@ -1,6 +1,6 @@
 { ... }:
 {
-  networking.hostName = "nexos"; 
+  networking.hostName = "nexus"; 
 
   networking.networkmanager.enable = true;  
   networking.nameservers = [ "1.1.1.1" "9.9.9.9" ]; 
