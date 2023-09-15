@@ -35,8 +35,6 @@ in
       fd                            
       git                           
                                     
-      #*X
-
       #*Internet                    
       brave                         
       librewolf                     
