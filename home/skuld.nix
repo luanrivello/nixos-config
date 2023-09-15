@@ -25,54 +25,52 @@ in
       #ripgrep                      
       #ripgrep-all                  
       imagemagick                   
+      nvimpager
       neovim                        
-      gotop #bashtop                
+      gotop
       ncdu                          
       tldr                          
       eza                           
       bat                           
       fd                            
-      #stow                          
       git                           
                                     
+      #*X
+
       #*Internet                    
       brave                         
       librewolf                     
       tor-browser-bundle-bin        
+      qbittorrent                   
       discord                       
       lbry                          
-      qbittorrent                   
-      git
       #vscode
 
       #*Desktop
+      xorg.xkill
+      xdg-utils
       polybar
       rofi
-      #stow
       feh
       #sxiv
       #nitrogen
       devour
       mpv
-      xdg-utils
-      xorg.xkill
       (nnn.override { withNerdIcons = true; })
-      nvimpager
       ffmpeg
       ffmpegthumbnailer
       xdragon
       neo
 
-
       #*Utils
-      #onlyoffice-bin
-      #epdfview
-      #calibre
+      #keepassxc
       #krita
+      #calibre
+      #epdfview
+      #onlyoffice-bin
+      #notion-app-enhanced
       #gimp-with-plugins
       #gcolor3
-      #notion-app-enhanced
-      #keepassxc
       #gparted
       #anki
 

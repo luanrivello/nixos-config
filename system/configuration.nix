@@ -94,15 +94,12 @@
     dconf.enable = true; #! GTK QT
   };
   environment.systemPackages = with pkgs; [
-    htop
     wget
     git
     man
     file
+    neovim
     killall
-    #alacritty
-    #neovim
-    #stow
   ];
 
 }
