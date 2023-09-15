@@ -1,3 +1,0 @@
-[submodule "user/.dotfiles"]
-	path = user/.dotfiles
-	url = https://github.com/luanrivello/.dotfiles
