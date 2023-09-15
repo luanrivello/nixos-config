@@ -1,8 +1,6 @@
 { pkgs, ... }:
 let
-  home = "/home/skuld/";
-  config = "/home/skuld/.config";
-  dotfiles = "/home/skuld/nixos-config/user/.dotfiles";
+  config = "~/.config";
 in
 {
   imports = [
