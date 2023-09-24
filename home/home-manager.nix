@@ -43,6 +43,7 @@ in
       #vscode
 
       #*Desktop
+      arandr
       xorg.xkill
       xdg-utils
       polybar
@@ -59,36 +60,18 @@ in
       neo
 
       #*Utils
-      #keepassxc
-      #krita
-      #calibre
-      #epdfview
-      #onlyoffice-bin
-      #notion-app-enhanced
-      #gimp-with-plugins
-      #gcolor3
-      #gparted
-      #anki
+      keepassxc
+      krita
+      calibre
+      epdfview
+      onlyoffice-bin
+      notion-app-enhanced
+      gimp-with-plugins
+      gcolor3
+      gparted
+      anki
 
     ];
-
-    file = {
-      #"${home}/.config" = {
-      #  recursive = true;
-      #  source = "${dotfiles}";
-      #}; 
-      #ALIASES
-      #"${home}/.aliases".source = "${dotfiles}/enviroment/.aliases";
-
-      #ALACRITTY
-      #//".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
-
-      #NEOVIM
-      #"${config}/nvim/init.vim".source = "${dotfiles}/nvim/.config/nvim/init.vim";
-
-      #POLYBAR
-      #"${config}/polybar/config.ini".source = "${dotfiles}/polybar/.config/polybar/config.ini";
-    };
 
   };
 }
