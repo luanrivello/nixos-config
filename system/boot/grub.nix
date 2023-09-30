@@ -5,7 +5,7 @@ in
 {
   boot.loader.grub = {
     enable = true;
-    device = "/dev/sdd";
+    device = "/dev/sda";
     useOSProber = true;
     theme = tartarus;
   };
