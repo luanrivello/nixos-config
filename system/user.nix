@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  users.users.spellblade = {
+  users.users.dareggon = {
     isNormalUser = true;
     initialPassword = "y";
     shell = pkgs.zsh;

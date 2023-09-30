@@ -16,7 +16,7 @@
   let
     system = "x86_64-linux";
     hostname = "nexus";
-    username = "spellblade";
+    username = "dareggon";
 
     pkgs = import nixpkgs {
       inherit system;
