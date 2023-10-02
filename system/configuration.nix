@@ -18,13 +18,14 @@
     ./boot/grub.nix
     ./desktop/bspwm.nix
     ./desktop/sddm.nix
+    ./modules/openrgb.nix
     ./modules/printer.nix
     ./modules/sound.nix
     ./modules/networking.nix
     ./user.nix
   ];
 
-  system.stateVersion = "22.11";
+  system.stateVersion = "23.11";
   system.autoUpgrade = {
     enable = true;
     dates = "weekly";
@@ -42,7 +43,7 @@
     };
   };
 
-  time.timeZone = "Etc/GMT-3";
+  time.timeZone = "Etc/GMT+3";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LANGUAGE = "en_US.UTF-8";
@@ -94,6 +95,7 @@
     dconf.enable = true; #! GTK QT
   };
   environment.systemPackages = with pkgs; [
+    xorg.xrandr
     wget
     git
     man

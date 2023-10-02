@@ -5,8 +5,17 @@ in
 {
   boot.loader.grub = {
     enable = true;
-    device = "/dev/sda";
+    device = "nodev";
     useOSProber = true;
+
+    copyKernels = true;
+    efiSupport = true;
+    efiInstallAsRemovable = true;
+
     theme = tartarus;
+    splashMode = "normal";
+    gfxmodeEfi = "1440x810";
+    fontSize = 60;
+
   };
 }
