@@ -30,8 +30,8 @@ in
       tldr                          
       eza                           
       bat                           
-      fd                            
       git                           
+      fd                            
                                     
       #*Internet                    
       brave                         

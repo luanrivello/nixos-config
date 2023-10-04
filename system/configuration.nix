@@ -98,6 +98,7 @@
     xorg.xrandr
     wget
     git
+    bc
     man
     file
     neovim
