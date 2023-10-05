@@ -15,7 +15,6 @@ in
     theme = tartarus;
     splashMode = "normal";
     gfxmodeEfi = "1280x720";
-    fontSize = 60;
 
   };
 }

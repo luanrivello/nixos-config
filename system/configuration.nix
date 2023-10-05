@@ -43,29 +43,6 @@
     };
   };
 
-  time.timeZone = "Etc/GMT+3";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LANGUAGE = "en_US.UTF-8";
-    #LC_ALL = "en_US.UTF-8";
-    LC_ADDRESS = "pt_BR.UTF-8";
-    LC_IDENTIFICATION = "pt_BR.UTF-8";
-    LC_MEASUREMENT = "pt_BR.UTF-8";
-    LC_MONETARY = "pt_BR.UTF-8";
-    LC_NAME = "pt_BR.UTF-8";
-    LC_NUMERIC = "pt_BR.UTF-8";
-    LC_PAPER = "pt_BR.UTF-8";
-    LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "ja_JP.UTF-8";
-  };
-
-  environment.binsh = "${pkgs.dash}/bin/dash";
-  programs.zsh.enable = true;
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "dvorak";
-  };
-
   security = {
     sudo.enable = false;
     doas.enable = true;
@@ -76,18 +53,14 @@
     }];
   };
 
-  fonts = {
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
-      ibm-plex
-    ];
-    fontconfig.defaultFonts = {
-      serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
-      sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
-      monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
-    };
+  environment.binsh = "${pkgs.dash}/bin/dash";
+  programs.zsh.enable = true;
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "dvorak";
   };
+
+  systemd.network.wait-online.enable = false;
 
   nixpkgs.config.allowUnfree = true;
   programs = {
@@ -104,5 +77,34 @@
     neovim
     killall
   ];
+
+  time.timeZone = "Etc/GMT+3";
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LANGUAGE = "en_US.UTF-8";
+    #LC_ALL = "en_US.UTF-8";
+    LC_ADDRESS = "pt_BR.UTF-8";
+    LC_IDENTIFICATION = "pt_BR.UTF-8";
+    LC_MEASUREMENT = "pt_BR.UTF-8";
+    LC_MONETARY = "pt_BR.UTF-8";
+    LC_NAME = "pt_BR.UTF-8";
+    LC_NUMERIC = "pt_BR.UTF-8";
+    LC_PAPER = "pt_BR.UTF-8";
+    LC_TELEPHONE = "pt_BR.UTF-8";
+    LC_TIME = "ja_JP.UTF-8";
+  };
+
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
+      ibm-plex
+    ];
+    fontconfig.defaultFonts = {
+      serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
+      sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
+      monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
+    };
+  };
 
 }
