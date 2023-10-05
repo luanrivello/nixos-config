@@ -32,6 +32,7 @@ in
       bat                           
       git                           
       fd                            
+      glibc
                                     
       #*Internet                    
       brave                         
