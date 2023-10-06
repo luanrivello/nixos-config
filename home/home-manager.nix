@@ -32,7 +32,6 @@ in
       bat                           
       git                           
       fd                            
-      glibc
                                     
       #*Internet                    
       brave                         
@@ -41,7 +40,7 @@ in
       qbittorrent                   
       discord                       
       lbry                          
-      #vscode
+      vscode
 
       #*Desktop
       arandr
