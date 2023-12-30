@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 #? nixos-install
 #? nixos-rebuild switch
@@ -22,7 +22,9 @@
     ./modules/printer.nix
     ./modules/sound.nix
     ./modules/networking.nix
+    ./modules/bluetooth.nix
     ./user.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   system.stateVersion = "23.11";
@@ -38,8 +40,8 @@
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "+5";
+      dates = "daily";
+      options = "--delete-older-than +5";
     };
   };
 
@@ -60,6 +62,7 @@
     keyMap = "dvorak";
   };
 
+  services.envfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 
   nixpkgs.config.allowUnfree = true;
@@ -69,13 +72,14 @@
   };
   environment.systemPackages = with pkgs; [
     xorg.xrandr
+    killall
     wget
     git
     bc
     man
     file
+    glibc
     neovim
-    killall
   ];
 
   time.timeZone = "Etc/GMT+3";
@@ -98,12 +102,14 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
-      ibm-plex
+      noto-fonts-cjk-sans
     ];
+
     fontconfig.defaultFonts = {
-      serif = [ "Caskaydia Cove Nerd Font" "IBM Plex Serif" ];
-      sansSerif = [ "Caskaydia Cove Nerd Font" "IBM Plex Sans" ];
-      monospace = [ "Fira Code Nerd Font" "IBM Plex Mono" ];
+      serif = [ "CaskaydiaCove Nerd Font" "Noto Sans CJK" ];
+      sansSerif = [ "CaskaydiaCove Nerd Font" "Noto Sans CJK" ];
+      monospace = [ "FiraCode Nerd Font" "Noto Sans Mono CJK" ];
+      emoji = [ "CaskaydiaCove Nerd Font" ];
     };
   };
 

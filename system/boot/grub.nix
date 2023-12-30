@@ -6,7 +6,7 @@ in
   boot.loader.grub = {
     enable = true;
     device = "nodev";
-    useOSProber = true;
+    useOSProber = false;
 
     copyKernels = true;
     efiSupport = true;

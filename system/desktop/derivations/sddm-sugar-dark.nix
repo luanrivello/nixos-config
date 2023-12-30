@@ -1,12 +1,12 @@
 { pkgs }:
 let
   image = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/luanrivello/.dotfiles/main/interface/Interface/wallpapers/pirate-dock.jpg";
-    sha256 = "sha256-/D3bNd4nOTRuHFbCyMNF3aLVsm/sGSN7xSWHPb4fqtc";
+    url = "https://raw.githubusercontent.com/luanrivello/.dotfiles/main/interface/Interface/display.png";
+    sha256 = "sha256-Pqskpj5vF96HraC/9sXx+WggfYgKUft4M6UMCzrpRvo=";
   };
 in
 pkgs.stdenv.mkDerivation {
-  name = "sddm-theme";
+  name = "sddm-sugar-dark";
 
   src = pkgs.fetchFromGitHub {
     owner = "MarianArlt";
@@ -20,10 +20,13 @@ pkgs.stdenv.mkDerivation {
     cp -R ./* $out/
     cd $out/
     rm Background.jpg
-    cp -r ${image} $out/Background.jpg
-    sed -i 's/HeaderText=Welcome!/HeaderText=お帰り!/' theme.conf
-    sed -i 's/Font="Noto Sans"/Font="Cascadia Code"/' theme.conf
-    sed -i 's/DateFormat="dddd, d of MMMM"/DateFormat="yyyy年 MMM月 d日 ddd"/' theme.conf
+    cp ${image} $out/Background.jpg
+    sed -i 's/MainColor=.*/MainColor="#FFFFFF"/' theme.conf
+    sed -i 's/AccentColor=.*/AccentColor="#BBBBBB"/' theme.conf
+    sed -i 's/HeaderText=.*/HeaderText=お帰り!/' theme.conf
+    sed -i 's/Font=.*/Font="Cascadia Code"/' theme.conf
+    sed -i 's/FontSizer=.*/FontSize=20/' theme.conf
+    sed -i 's/DateFormat=.*/DateFormat="yyyy年 MMM dd日 dddd"/' theme.conf
     sed -i 's/ForceHideCompletePassword=false/ForceHideCompletePassword=true/' theme.conf
   '';
 }

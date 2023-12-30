@@ -12,8 +12,8 @@
       displayManager.defaultSession = "none+bspwm";
 
       windowManager.bspwm.enable = true;
+
     };
   };
-
 }
 

@@ -3,7 +3,7 @@
   networking.hostName = "nexus"; 
 
   networking.networkmanager.enable = true;  
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ]; 
+  networking.nameservers = [ "9.9.9.9" "1.1.1.1" ]; 
 
   # networking.wireless.enable = true; #? Enables wireless support via wpa_supplicant.
 

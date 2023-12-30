@@ -2,16 +2,18 @@
 let
   no-rgb = pkgs.writeScriptBin "no-rgb" ''
     #!/bin/sh
-    NUM_DEVICES=$(${pkgs.openrgb}/bin/openrgb --noautoconnect --list-devices | grep -E '^[0-9]+: ' | wc -l)
+    #NUM_DEVICES=$(${pkgs.openrgb}/bin/openrgb --noautoconnect --list-devices | grep -E '^[0-9]+: ' | wc -l)
 
-    for i in $(seq 0 $(($NUM_DEVICES - 1))); do
-      ${pkgs.openrgb}/bin/openrgb --noautoconnect --device $i --mode static --color 000000
+    for i in $(seq 0 3); do
+      ${pkgs.openrgb}/bin/openrgb --noautoconnect --device $i --mode off --color 000000
     done
+    wait
   '';
 in {
   config = {
     services.udev.packages = [ pkgs.openrgb ];
     boot.kernelModules = [ "i2c-dev" ];
+    hardware.i2c.enable = true;
 
     systemd.services.no-rgb = {
       description = "no-rgb";

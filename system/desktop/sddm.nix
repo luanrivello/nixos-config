@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   sugar-dark = "${import derivations/sddm-sugar-dark.nix { inherit pkgs; }}";
 in

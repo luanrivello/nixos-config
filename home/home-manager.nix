@@ -23,7 +23,6 @@ in
       ripgrep                      
       #ripgrep-all                  
       imagemagick                   
-      nvimpager
       neovim                        
       gotop
       ncdu                          
@@ -39,7 +38,7 @@ in
       tor-browser-bundle-bin        
       qbittorrent                   
       discord                       
-      lbry                          
+      lbry
       vscode
 
       #*Desktop
@@ -70,6 +69,9 @@ in
       gcolor3
       gparted
       anki
+
+      #*AI
+      ollama
 
     ];
 

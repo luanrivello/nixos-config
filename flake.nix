@@ -12,35 +12,35 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
     hostname = "nexus";
     username = "dareggon";
 
     pkgs = import nixpkgs {
-      inherit system;
+      #inherit system;
       config.allowUnfree = true;
     };
+    #pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in
   {
-    nixosConfigurations = {
-      ${hostname} = nixpkgs.lib.nixosSystem {
-        inherit pkgs system;
+    nixosConfigurations.nexus = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      #inherit pkgs system;
 
-        modules = [
-          ./system/configuration.nix
+      modules = [
+        ./system/configuration.nix 
+        inputs.home-manager.nixosModules.default
 
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.${username} = ./home/home-manager.nix;
-            };
-          }
-        ];
-
-      };
+        #home-manager.nixosModules.home-manager {
+        #  home-manager = {
+        #    useGlobalPkgs = true;
+        #    useUserPackages = true;
+        #    users.${username} = ./home/home-manager.nix;
+        #  };
+        #}
+      ];
     };
   };
 }

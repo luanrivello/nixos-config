@@ -1,6 +1,9 @@
 { pkgs, ... }:
+let
+  username = "dareggon";
+in
 {
-  users.users.dareggon = {
+  users.users.${username} = {
     isNormalUser = true;
     initialPassword = "y";
     shell = pkgs.zsh;
@@ -13,4 +16,10 @@
       "lp" "scanner" #! Printer
     ];
   };
+
+  home-manager = {
+    #extraSpecialArgs = { inherit inputs; };
+    users.${username} = import ../home/home-manager.nix;
+  };
+  
 }
