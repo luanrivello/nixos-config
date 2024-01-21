@@ -1,18 +1,4 @@
-{ config, pkgs, inputs, ... }:
-
-#? nixos-install
-#? nixos-rebuild switch
-#? nix-shell -p
-#? nix-env -iA <name>
-#? nix-env -q
-#? nix-env --delete-generations 90d
-#? nix-store --gc 
-#? sudo nix-collect-garbage -d
-#? nix-channel --update
-#? nixos-rebuild switch --upgrade
-#? sudo nixos-rebuild switch --flake '.#nexos'
-
-{
+{ config, pkgs, inputs, ... }:{
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
@@ -79,7 +65,9 @@
     man
     file
     glibc
+    udisks
     neovim
+    calibre
   ];
 
   time.timeZone = "Etc/GMT+3";
@@ -103,6 +91,7 @@
     packages = with pkgs; [
       (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
       noto-fonts-cjk-sans
+      liberation_ttf
     ];
 
     fontconfig.defaultFonts = {
