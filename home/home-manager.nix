@@ -49,7 +49,7 @@ in
       rofi
       feh
       #sxiv
-      #nitrogen
+      nitrogen
       devour
       mpv
       (nnn.override { withNerdIcons = true; })
