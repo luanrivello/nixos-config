@@ -5,10 +5,8 @@
   networking.networkmanager.enable = true;  
   networking.nameservers = [ "9.9.9.9" "1.1.1.1" ]; 
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 8080 ];
-  };
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8080 ];
 
   #* Open ports in the firewall
   # networking.firewall.allowedTCPPorts = [ ... ];
