@@ -2,7 +2,8 @@
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
-    ./desktop/bspwm.nix
+    #./desktop/bspwm.nix
+    ./desktop/hyprland.nix
     ./desktop/sddm.nix
     ./modules/openrgb.nix
     ./modules/printer.nix
@@ -67,7 +68,6 @@
     glibc
     udisks
     neovim
-    calibre
   ];
 
   time.timeZone = "Etc/GMT+3";

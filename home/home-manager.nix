@@ -58,6 +58,13 @@ in
       xdragon
       neo
 
+      kitty
+      eww      #bar
+      dunst    #notification
+      swww     #img and gif wallpaper
+      mpvpaper #mpv wallpaper
+
+
       #*Utils
       keepassxc
       krita
@@ -69,6 +76,7 @@ in
       gcolor3
       gparted
       anki
+      calibre
 
       #*AI
       ollama
