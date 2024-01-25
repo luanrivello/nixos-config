@@ -63,7 +63,9 @@ in
       dunst    #notification
       swww     #img and gif wallpaper
       mpvpaper #mpv wallpaper
-
+      grim     #screenshot
+      slurp    #select
+      wl-cop   #clipboard
 
       #*Utils
       keepassxc
