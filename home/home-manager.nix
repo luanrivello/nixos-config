@@ -65,7 +65,8 @@ in
       mpvpaper #mpv wallpaper
       grim     #screenshot
       slurp    #select
-      wl-cop   #clipboard
+      wl-clipboard  #clipboard
+      wl-color-picker  #color-picker
 
       #*Utils
       keepassxc
