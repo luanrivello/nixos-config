@@ -2,7 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
-    #./desktop/bspwm.nix
+    ./desktop/bspwm.nix
     ./desktop/hyprland.nix
     ./desktop/sddm.nix
     ./modules/openrgb.nix

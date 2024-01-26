@@ -59,6 +59,7 @@ in
       neo
 
       kitty
+      wofi     #app launcher
       eww      #bar
       dunst    #notification
       swww     #img and gif wallpaper
