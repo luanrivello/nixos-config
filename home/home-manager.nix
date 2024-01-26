@@ -60,7 +60,7 @@ in
 
       kitty
       wofi     #app launcher
-      eww      #bar
+      eww-wayland      #bar
       dunst    #notification
       swww     #img and gif wallpaper
       mpvpaper #mpv wallpaper
