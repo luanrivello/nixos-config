@@ -47,7 +47,7 @@ in
       arandr
       xorg.xkill
       xdg-utils
-      polybar
+      #polybar
       rofi
       #feh
       sxiv
