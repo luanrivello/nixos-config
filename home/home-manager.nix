@@ -39,7 +39,7 @@ in
       tor-browser-bundle-bin
       qbittorrent
       discord
-      lbry
+      #lbry
       vscode
       spotify
 
@@ -59,7 +59,7 @@ in
       ffmpegthumbnailer
       xdragon
       neo
-      wl-gammactl
+      #wl-gammactl
       gammastep
 
       dunst    #notification
@@ -80,11 +80,10 @@ in
       #gimp-with-plugins
       gcolor3
       gparted
-      anki
-      calibre
+      #anki
 
       #*AI
-      ollama
+      #ollama
 
     ];
 

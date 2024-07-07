@@ -9,8 +9,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    protontricks
-    xorg.xrandr
+    #protontricks
+    #xorg.xrandr
     killall
     wget
     git
