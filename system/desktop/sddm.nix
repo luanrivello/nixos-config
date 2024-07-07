@@ -4,9 +4,10 @@ let
 in
 {
   services.xserver.enable = true;
-  services.xserver.displayManager = {
+  services.displayManager = {
         sddm.enable = true;
         sddm.theme = sugar-dark;
+        sddm.wayland.enable = true;
   };
 
   environment.systemPackages = with pkgs.libsForQt5.qt5; [

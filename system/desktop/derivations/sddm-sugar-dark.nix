@@ -26,7 +26,7 @@ pkgs.stdenv.mkDerivation {
     sed -i 's/HeaderText=.*/HeaderText=お帰り!/' theme.conf
     sed -i 's/Font=.*/Font="Cascadia Code"/' theme.conf
     sed -i 's/FontSizer=.*/FontSize=20/' theme.conf
-    sed -i 's/DateFormat=.*/DateFormat="yyyy年 MMM月 dd日 dddd"/' theme.conf
+    sed -i 's/DateFormat=.*/DateFormat="yyyy年 MMM dd日 dddd"/' theme.conf
     sed -i 's/ForceHideCompletePassword=false/ForceHideCompletePassword=true/' theme.conf
   '';
 }
