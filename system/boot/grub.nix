@@ -3,14 +3,18 @@ let
   tartarus = "${import derivations/tartarus-grub.nix { inherit pkgs; }}";
 in
 {
+  boot.loader.efi = {
+    canTouchEfiVariables = true;
+    efiSysMountPoint = "/boot/efi";
+  };
   boot.loader.grub = {
     enable = true;
     device = "nodev";
-    useOSProber = false;
+    useOSProber = true;
 
     copyKernels = true;
     efiSupport = true;
-    efiInstallAsRemovable = true;
+    #efiInstallAsRemovable = true;
 
     theme = tartarus;
     splashMode = "normal";
