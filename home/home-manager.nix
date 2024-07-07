@@ -9,37 +9,38 @@ in
 
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
-  
+
   xdg.userDirs.enable = true;
   xdg.userDirs.createDirectories = true;
 
-  home = {                          
-    stateVersion = "23.11";         
-                                    
-    packages = with pkgs; [         
-      #*Core                        
-      alacritty                     
-      neofetch                      
-      ripgrep                      
-      #ripgrep-all                  
-      imagemagick                   
-      neovim                        
+  home = {
+    stateVersion = "23.11";
+
+    packages = with pkgs; [
+      #*Core
+      alacritty
+      neofetch
+      ripgrep
+      #ripgrep-all
+      imagemagick
+      neovim
       gotop
-      ncdu                          
-      tldr                          
-      eza                           
-      bat                           
-      git                           
-      fd                            
-                                    
-      #*Internet                    
-      brave                         
-      librewolf                     
-      tor-browser-bundle-bin        
-      qbittorrent                   
-      discord                       
+      ncdu
+      tldr
+      eza
+      bat
+      git
+      fd
+
+      #*Internet
+      brave
+      librewolf
+      tor-browser-bundle-bin
+      qbittorrent
+      discord
       lbry
       vscode
+      spotify
 
       #*Desktop
       arandr
@@ -47,9 +48,9 @@ in
       xdg-utils
       polybar
       rofi
-      feh
-      #sxiv
-      nitrogen
+      #feh
+      sxiv
+      #nitrogen
       devour
       mpv
       (nnn.override { withNerdIcons = true; })
@@ -57,10 +58,9 @@ in
       ffmpegthumbnailer
       xdragon
       neo
+      wl-gammactl
+      gammastep
 
-      kitty
-      wofi     #app launcher
-      eww-wayland      #bar
       dunst    #notification
       swww     #img and gif wallpaper
       mpvpaper #mpv wallpaper
@@ -76,7 +76,7 @@ in
       epdfview
       onlyoffice-bin
       notion-app-enhanced
-      gimp-with-plugins
+      #gimp-with-plugins
       gcolor3
       gparted
       anki
