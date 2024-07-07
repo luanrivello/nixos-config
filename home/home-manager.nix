@@ -4,7 +4,7 @@ let
 in
 {
   imports = [
-    ./theme-eminence.nix
+    ./themes/eminence.nix
   ];
 
   programs.home-manager.enable = true;
