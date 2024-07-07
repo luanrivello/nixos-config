@@ -14,12 +14,13 @@ in
   xdg.userDirs.createDirectories = true;
 
   home = {
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     packages = with pkgs; [
       #*Core
       alacritty
       neofetch
+      fastfetch
       ripgrep
       #ripgrep-all
       imagemagick
