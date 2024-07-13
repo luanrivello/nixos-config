@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:{
+{ pkgs, inputs, ... }:{
   imports = [
     ./hardware-configuration.nix
     ./boot/grub.nix
@@ -18,6 +18,7 @@
     ./modules/key.nix
 
     ./packages.nix
+
     ./user.nix
     inputs.home-manager.nixosModules.default
   ];
