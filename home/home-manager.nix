@@ -18,6 +18,8 @@ in
 
     packages = with pkgs; [
       #*Core
+      nixd
+      hakuneko
       alacritty
       neofetch
       fastfetch
@@ -35,6 +37,7 @@ in
 
       #*Internet
       brave
+      firefox
       librewolf
       tor-browser-bundle-bin
       qbittorrent
@@ -74,13 +77,14 @@ in
       keepassxc
       krita
       calibre
-      epdfview
+      qpdfview
       onlyoffice-bin
       notion-app-enhanced
       #gimp-with-plugins
       gcolor3
       gparted
       #anki
+      #ardour
 
       #*AI
       #ollama

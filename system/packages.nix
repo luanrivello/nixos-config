@@ -6,6 +6,12 @@
     steam.enable = true;
     gamemode.enable = true;
     dconf.enable = true; #! GTK QT
+
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
+    };
+
   };
 
   environment.systemPackages = with pkgs; [
@@ -14,7 +20,7 @@
     killall
     wget
     git
-    bc
+    #bc
     man
     file
     glibc

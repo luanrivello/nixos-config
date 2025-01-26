@@ -23,6 +23,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   system.stateVersion = "24.05";
   system.autoUpgrade = {
     enable = true;
@@ -30,7 +32,7 @@
   };
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nix;
     extraOptions = "experimental-features = nix-command flakes";
 
     settings.auto-optimise-store = true;
@@ -62,7 +64,7 @@
 
   #disk mount
   services.devmon.enable = true;
-  services.gvfs.enable = true;
+  #services.gvfs.enable = true;
   services.udisks2.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;

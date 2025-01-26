@@ -6,7 +6,7 @@ in
   services.xserver.enable = true;
   services.displayManager = {
         sddm.enable = true;
-        sddm.theme = sugar-dark;
+        sddm.theme = "sddm-astronaut-theme";
         sddm.wayland.enable = true;
   };
 

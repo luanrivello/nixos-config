@@ -3,7 +3,9 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
+      #(nerdfonts.override { fonts = [ "CascadiaCode" "FiraCode" ]; })
+      nerd-fonts.caskaydia-cove
+      nerd-fonts.fira-code
       noto-fonts-cjk-sans
       liberation_ttf
     ];
