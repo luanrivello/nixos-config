@@ -4,9 +4,10 @@
     ./boot/grub.nix
     #./boot/efi.nix
 
-    #./desktop/bspwm.nix
     ./desktop/hyprland.nix
-    ./desktop/sddm.nix
+    ./desktop/ly.nix
+    #./desktop/bspwm.nix
+    #./desktop/sddm.nix
 
     ./modules/networking.nix
     ./modules/bluetooth.nix
