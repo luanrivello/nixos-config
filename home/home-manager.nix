@@ -19,9 +19,9 @@ in
     packages = with pkgs; [
       #*Core
       nixd
-      hakuneko
+      #hakuneko
       alacritty
-      neofetch
+      #neofetch
       fastfetch
       ripgrep
       #ripgrep-all
@@ -37,13 +37,13 @@ in
 
       #*Internet
       brave
-      firefox
+      #firefox
       librewolf
       tor-browser-bundle-bin
       qbittorrent
       discord
       #lbry
-      vscode
+      #vscode
       spotify
 
       #*Desktop
@@ -65,19 +65,21 @@ in
       #wl-gammactl
       gammastep
 
-      dunst    #notification
-      swww     #img and gif wallpaper
-      mpvpaper #mpv wallpaper
-      grim     #screenshot
-      slurp    #select
-      wl-clipboard  #clipboard
-      wl-color-picker  #color-picker
+      dunst           #notification
+      #swww            #img and gif wallpaper
+      hyprpaper       #hyprland wallpaper
+      mpvpaper        #mpv wallpaper
+      grim            #screenshot
+      slurp           #select
+      wl-clipboard    #clipboard
+      wl-color-picker #color-picker
 
       #*Utils
       keepassxc
       krita
       calibre
       qpdfview
+      thunderbird
       onlyoffice-bin
       notion-app-enhanced
       #gimp-with-plugins
@@ -88,6 +90,8 @@ in
 
       #*AI
       #ollama
+      code-cursor
+      goose-cli
 
     ];
 
