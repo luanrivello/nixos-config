@@ -3,7 +3,7 @@ let
   tartarus = "${import derivations/tartarus-grub.nix { inherit pkgs; }}";
 in
 {
-  imports = [ "./args.nix" ];
+  imports = [ ./args.nix ];
 
   boot.loader.efi = {
     canTouchEfiVariables = true;
