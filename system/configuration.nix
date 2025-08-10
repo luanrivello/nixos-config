@@ -5,9 +5,9 @@
     #./boot/efi.nix
 
     ./desktop/hyprland.nix
-    ./desktop/ly.nix
-    #./desktop/bspwm.nix
-    #./desktop/sddm.nix
+    #./desktop/display-manager/ly.nix
+    #./desktop/display-manager/bspwm.nix
+    ./desktop/display-manager/sddm.nix
 
     ./modules/networking.nix
     ./modules/bluetooth.nix
@@ -30,6 +30,11 @@
   system.autoUpgrade = {
     enable = true;
     dates = "weekly";
+    flags = [
+      "--install"
+      "--no-build-output"
+      "--flake" "/home/dareggon/nixos-config#nixos"
+    ];
   };
 
   nix = {
@@ -40,7 +45,7 @@
     gc = {
       automatic = true;
       dates = "daily";
-      options = "--delete-older-than +5";
+      options = "--delete-older-than 7d";
     };
   };
 
