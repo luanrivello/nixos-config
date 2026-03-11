@@ -39,12 +39,12 @@ in
       brave
       #firefox
       librewolf
-      tor-browser-bundle-bin
+      tor-browser
       qbittorrent
       discord
       #lbry
       #vscode
-      spotify
+      #spotify
 
       #*Desktop
       arandr
@@ -60,10 +60,11 @@ in
       (nnn.override { withNerdIcons = true; })
       ffmpeg
       ffmpegthumbnailer
-      xdragon
+      dragon-drop
       neo
       #wl-gammactl
       gammastep
+      bluetui
 
       dunst           #notification
       #swww            #img and gif wallpaper
@@ -80,7 +81,8 @@ in
       calibre
       qpdfview
       thunderbird
-      onlyoffice-bin
+      #onlyoffice-desktopediotors
+      #jetbrain.idea-community-src
       notion-app-enhanced
       #gimp-with-plugins
       gcolor3

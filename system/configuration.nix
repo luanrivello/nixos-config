@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }:{
   imports = [
     ./hardware-configuration.nix
-    ./boot/grub.nix
-    #./boot/efi.nix
+    #./boot/grub.nix
+    ./boot/efi.nix
 
     ./desktop/hyprland.nix
     #./desktop/display-manager/ly.nix
@@ -11,7 +11,7 @@
 
     ./modules/networking.nix
     ./modules/bluetooth.nix
-    ./modules/openrgb.nix
+    #./modules/openrgb.nix
     ./modules/printer.nix
     ./modules/locale.nix
     ./modules/sound.nix
@@ -72,6 +72,7 @@
   services.devmon.enable = true;
   #services.gvfs.enable = true;
   services.udisks2.enable = true;
+  services.gvfs.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;
 
