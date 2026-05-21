@@ -89,11 +89,13 @@ in
       gparted
       #anki
       #ardour
+      heroic
+      protonplus
 
       #*AI
       #ollama
-      code-cursor
-      goose-cli
+      #code-cursor
+      #goose-cli
 
     ];
 

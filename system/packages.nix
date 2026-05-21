@@ -11,7 +11,6 @@
       enable = true;
       plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
     };
-
   };
 
   environment.systemPackages = with pkgs; [
@@ -26,5 +25,8 @@
     glibc
     udisks
     neovim
+
+    claude-code
+    ollama-rocm
   ];
 }
