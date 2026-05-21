@@ -31,9 +31,7 @@
     enable = true;
     dates = "weekly";
     flags = [
-      "--install"
-      "--no-build-output"
-      "--flake" "/home/dareggon/nixos-config#nixos"
+      "--flake" "/home/dareggon/nixos-config#nexus"
     ];
   };
 
