@@ -3,7 +3,6 @@
   networking = {
     hostName = "nexus"; 
 
-    wireless.enable = false;
     networkmanager.enable = true;  
     networkmanager.dns = "none";  
     #ControlD Ads&Track, Quad9
