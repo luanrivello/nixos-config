@@ -1,22 +1,18 @@
 { pkgs, inputs, ... }:{
   imports = [
     ./hardware-configuration.nix
-    #./boot/grub.nix
     ./boot/efi.nix
 
     ./desktop/hyprland.nix
-    #./desktop/display-manager/ly.nix
-    #./desktop/display-manager/bspwm.nix
     ./desktop/display-manager/sddm.nix
 
+    ./modules/controller-remap.nix
     ./modules/networking.nix
     ./modules/bluetooth.nix
-    #./modules/openrgb.nix
     ./modules/printer.nix
     ./modules/locale.nix
     ./modules/sound.nix
     ./modules/fonts.nix
-    ./modules/key.nix
 
     ./packages.nix
 
@@ -28,11 +24,11 @@
 
   system.stateVersion = "24.05";
   system.autoUpgrade = {
-    enable = true;
+    enable = false;
     dates = "weekly";
     flags = [
       "--install"
-      "--no-build-output"
+      #"--no-build-output"
       "--flake" "/home/dareggon/nixos-config#nixos"
     ];
   };
@@ -62,17 +58,15 @@
   #environment.binsh = "${pkgs.dash}/bin/dash";
   programs.zsh.enable = true;
   console = {
-    font = "Lat2-Terminus16";
     keyMap = "dvorak";
   };
 
-  services.envfs.enable = true;
+  #services.envfs.enable = true;
 
   #disk mount
-  services.devmon.enable = true;
+  #services.devmon.enable = true;
+  #services.udisks2.enable = true;
   #services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.gvfs.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;
 
