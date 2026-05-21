@@ -1,4 +1,10 @@
-<div align="center">
+<div align="center">         
+
+# NixOS Configuration
+
+*Hyprland rice powered by declarative masochism and persistent configuration-induced headaches.*
+
+</div>
 
 ```txt
           ▗▄▄▄       ▗▄▄▄▄    ▄▄▄▖             ╭─────────── Software Information ───────────╮
@@ -17,15 +23,9 @@
     ▟███▛  ▜███▙           ▝▀▀▀▀                   AMD Radeon RX 5600 XT [Discrete]
     ▜██▛    ▜███▙ ▜██████████████████▛           󰑭  7.13 GiB / 31.21 GiB (23%)
      ▜▛     ▟████▙ ▜████████████████▛            󰓡  0 B / 8.80 GiB (0%)
-           ▟██████▙         ▜███▙                  159.00 GiB / 218.52 GiB (73%) - ext4
-          ▟███▛▜███▙         ▜███▙                 513.54 GiB / 852.54 GiB (60%) - fuseblk
-         ▟███▛  ▜███▙         ▜███▙                1.34 TiB / 3.58 TiB (37%) - ext4
+           ▟██████▙         ▜███▙                  218.52 GiB - ext4
+          ▟███▛▜███▙         ▜███▙                 852.54 GiB - fuseblk
+         ▟███▛  ▜███▙         ▜███▙                  3.58 TiB - ext4
          ▝▀▀▀    ▀▀▀▀▘         ▀▀▀▘            ╰────────────────────────────────────────────╯
                                                                                
 ```
-
-# NixOS Configuration
-
-*Hyprland rice powered by declarative masochism and persistent configuration-induced headaches.*
-
-</div>
