@@ -5,7 +5,7 @@ in
 {
   users.users.${username} = {
     isNormalUser = true;
-    initialPassword = "y";
+    initialHashedPassword = "$6$G5G1lL3liF17JgE2$ocsn097CmpH5tSbMxQ4N7UxexRUQnlMIDRAGQS8PPYnsTJbSugM06TWh81StG/z80kvX2MWQZCAZMeZp1gcI6.";
     shell = pkgs.zsh;
 
     extraGroups = [
