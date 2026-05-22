@@ -24,7 +24,7 @@
 
   system.stateVersion = "24.05";
   system.autoUpgrade = {
-    enable = false;
+    enable = true;
     dates = "weekly";
     flags = [
       "--flake" "/home/dareggon/nixos-config#nexus"
