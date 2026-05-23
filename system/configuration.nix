@@ -4,7 +4,7 @@
     ./boot/efi.nix
 
     ./desktop/hyprland.nix
-    ./desktop/display-manager/sddm.nix
+    ./desktop/display-manager/ly.nix
 
     ./modules/controller-remap.nix
     ./modules/networking.nix
