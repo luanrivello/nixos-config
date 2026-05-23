@@ -8,7 +8,7 @@
     };
     Policy = {
       AutoEnable = true;
-      AutoConnect = false;
+      AutoConnect = true;
     };
   };
   services.blueman.enable = true;
