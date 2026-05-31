@@ -10,8 +10,11 @@ in
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
 
-  xdg.userDirs.enable = true;
-  xdg.userDirs.createDirectories = true;
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    setSessionVariables = true;
+  };
 
   home = {
     stateVersion = "24.05";
@@ -48,7 +51,7 @@ in
 
       #*Desktop
       arandr
-      xorg.xkill
+      xkill
       xdg-utils
       #polybar
       rofi
@@ -67,8 +70,8 @@ in
       bluetui
 
       dunst           #notification
-      #swww            #img and gif wallpaper
-      hyprpaper       #hyprland wallpaper
+      #awww            #img and gif wallpaper
+      #hyprpaper       #hyprland wallpaper
       mpvpaper        #mpv wallpaper
       grim            #screenshot
       slurp           #select

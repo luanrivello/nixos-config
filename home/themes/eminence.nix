@@ -10,7 +10,10 @@
     enable = true;
     #cursorTheme.package = pkgs.bibata-cursors;
     #cursorTheme.name = "Bibata-Modern-Classic";
-    
+
+    #gtk4.theme = config.gtk.theme;
+    gtk4.theme = null;
+
     theme.package = pkgs.adw-gtk3;  
     theme.name = "adw-gtk3-dark";  
     
