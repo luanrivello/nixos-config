@@ -4,7 +4,7 @@
     ./boot/efi.nix
 
     ./desktop/hyprland.nix
-    ./desktop/display-manager/ly.nix
+    ./desktop/display-manager/sysc-greet.nix
 
     ./modules/controller-remap.nix
     ./modules/networking.nix
@@ -53,19 +53,25 @@
     }];
   };
 
+  services.kmscon = {
+    enable = true;
+    fonts = [{
+      name = "CaskaydiaCove Nerd Font";
+      package = pkgs.nerd-fonts.caskaydia-cove;
+    }];
+    extraConfig = ''
+    font-size=14
+    '';
+    extraOptions = "--xkb-layout=dvorak";
+  };
+
   #environment.binsh = "${pkgs.dash}/bin/dash";
   programs.zsh.enable = true;
   console = {
     keyMap = "dvorak";
   };
 
-  #services.envfs.enable = true;
-
-  #disk mount
-  #services.devmon.enable = true;
-  #services.udisks2.enable = true;
-  #services.gvfs.enable = true;
-
+  services.envfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 
 }

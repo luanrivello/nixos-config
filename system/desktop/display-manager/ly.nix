@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   services.xserver.enable = true;
   services.displayManager.ly = {
@@ -53,7 +53,7 @@
 
           hide_version_string = false;
 
-          lang = "ja_JP";
+          lang = "ja";
         };
   };
 
