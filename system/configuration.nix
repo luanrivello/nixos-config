@@ -10,6 +10,7 @@
     ./modules/networking.nix
     ./modules/bluetooth.nix
     ./modules/printer.nix
+    ./modules/podman.nix
     ./modules/locale.nix
     ./modules/sound.nix
     ./modules/fonts.nix
