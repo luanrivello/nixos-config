@@ -31,11 +31,15 @@
   fileSystems."/mnt/Storage" =
     { device = "/dev/disk/by-label/Storage";
       fsType = "ntfs";
+      noCheck = true;
+      options = [ "noauto" "x-systemd.automount" ];
     };
 
   fileSystems."/mnt/Stronghold" =
     { device = "/dev/disk/by-label/Stronghold";
       fsType = "ext4";
+      noCheck = true;
+      options = [ "noauto" "x-systemd.automount" ];
     };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
