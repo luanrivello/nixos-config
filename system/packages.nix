@@ -27,6 +27,11 @@
     neovim
 
     claude-code
-    ollama-rocm
+    #ollama-rocm
+    #jetbrains.idea
+    #android-studio
+    #kotlin
+    #gradle
+    #jdk21
   ];
 }

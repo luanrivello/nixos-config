@@ -29,6 +29,7 @@ in
       ripgrep
       #ripgrep-all
       imagemagick
+      btop-rocm
       neovim
       gotop
       ncdu
@@ -53,6 +54,7 @@ in
       arandr
       xkill
       xdg-utils
+      setxkbmap
       #polybar
       rofi
       #feh
@@ -61,6 +63,7 @@ in
       devour
       mpv
       (nnn.override { withNerdIcons = true; })
+      superfile
       ffmpeg
       ffmpegthumbnailer
       dragon-drop
@@ -86,7 +89,7 @@ in
       thunderbird
       #onlyoffice-desktopediotors
       #jetbrain.idea-community-src
-      notion-app-enhanced
+      #notion-app-enhanced
       #gimp-with-plugins
       gcolor3
       gparted
@@ -94,6 +97,7 @@ in
       #ardour
       heroic
       protonplus
+      obsidian
 
       #*AI
       #ollama

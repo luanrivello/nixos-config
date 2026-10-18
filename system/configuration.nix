@@ -56,13 +56,9 @@
 
   services.kmscon = {
     enable = true;
-    fonts = [{
-      name = "CaskaydiaCove Nerd Font";
-      package = pkgs.nerd-fonts.caskaydia-cove;
-    }];
-    extraConfig = ''
-    font-size=14
-    '';
+    useXkbConfig = true;
+    config.font-name = "CaskaydiaCove Nerd Font";
+    config.font-size = 14;
     extraOptions = "--xkb-layout=dvorak";
   };
 
