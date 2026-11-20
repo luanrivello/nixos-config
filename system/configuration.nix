@@ -1,4 +1,5 @@
-{ pkgs, ... }:{
+{ pkgs, ... }:
+{
   imports = [
     ./hardware-configuration.nix
     ./boot/efi.nix
@@ -23,19 +24,12 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   system.stateVersion = "24.05";
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
-    flags = [
-      "--flake" "/home/dareggon/nixos-config#nexus"
-    ];
-  };
 
   nix = {
-    package = pkgs.nix;
-    extraOptions = "experimental-features = nix-command flakes";
-
-    settings.auto-optimise-store = true;
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
     gc = {
       automatic = true;
       dates = "daily";
@@ -55,9 +49,10 @@
 
   services.kmscon = {
     enable = true;
-    useXkbConfig = true;
-    config.font-name = "CaskaydiaCove Nerd Font";
-    config.font-size = 14;
+    config = {
+      font-name = "CaskaydiaCove Nerd Font";
+      font-size = 14;
+    };
     extraOptions = "--xkb-layout=dvorak";
   };
 
@@ -68,5 +63,4 @@
   };
 
   services.envfs.enable = true;
-
 }
