@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:{
+{ pkgs, ... }:{
   imports = [
     ./hardware-configuration.nix
     ./boot/efi.nix
@@ -18,7 +18,6 @@
     ./packages.nix
 
     ./user.nix
-    inputs.home-manager.nixosModules.default
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
