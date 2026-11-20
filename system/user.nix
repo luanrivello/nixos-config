@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let
-  username = "dareggon";
-in
+{ pkgs, username, ... }:
 {
   users.users.${username} = {
     isNormalUser = true;
@@ -11,15 +8,14 @@ in
     extraGroups = [
       "wheel" #! Root for the user
       "video"
-      "audio"
       "networkmanager"
       "lp" "scanner" #! Printer
     ];
   };
 
   home-manager = {
-    #extraSpecialArgs = { inherit inputs; };
-    users.${username} = import ../home/home-manager.nix;
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.${username} = ../home/home-manager.nix;
   };
-  
 }
