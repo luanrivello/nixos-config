@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   services.xserver.enable = true;
   services.displayManager.ly = {
@@ -33,7 +33,7 @@
           max_login_len = 255;
           max_password_len = 255;
 
-          auto_login_user = "dareggon";
+          auto_login_user = username;
           default_inputs = "password";
 
           load = true;
