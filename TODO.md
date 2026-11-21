@@ -1,3 +1,22 @@
+# Checks to run after pull, switch and reboot
+
+```
+{
+  echo "## Boot time";        systemd-analyze
+  echo "## Critical chain";   systemd-analyze critical-chain
+  echo "## Slowest units";    systemd-analyze blame | grep -v '\.device' | head -20
+  echo "## SATA + thermal";   journalctl -b -k -o short-monotonic | grep -E 'ata[1-6]|thermal|_PSL'
+  echo "## GPU mask";         cat /sys/module/amdgpu/parameters/ppfeaturemask
+  echo "## Kernel params";    cat /proc/cmdline
+  echo "## DNS";              resolvectl status
+  echo "## DNS lookup";       resolvectl query nixos.org
+  echo "## IPv6 clash";       journalctl -b | grep -c 'duplicate address'
+  echo "## Failed units";     systemctl --failed; systemctl --user --failed
+  echo "## Old profile paths"; grep -rn 'nix-profile' ~/.config 2>/dev/null
+  echo "## Errors this boot"; journalctl -b -p err -o short-monotonic --no-pager | grep -v 'Ignoring duplicate'
+} >> TODO.md 2>&1
+```
+
  nexus  dareggon  nixos-config  main [ 󱈎 ]
 陰⫸ systemd-analyze
 Startup finished in 7.553s (firmware) + 496ms (loader) + 551ms (kernel) + 5.996s (initrd) + 4.876s (userspace) = 19.474s
