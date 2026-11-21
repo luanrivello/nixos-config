@@ -70,11 +70,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771646943,
-        "narHash": "sha256-9xRcrQaiNVQzynncoWepaT4SzzMeZoFopIcuPIch2iY=",
+        "lastModified": 1795179529,
+        "narHash": "sha256-tsvGe6XNbnunQdmJ6yQG0xbTXPDHZKmM7oK76Olwzto=",
         "owner": "Nomadcxx",
         "repo": "gSlapper",
-        "rev": "6e18f69f21f1b3ef1afb1c7b8eaf1b4890a716ef",
+        "rev": "cf74e77124e153d63355bd98874a17518b57e999",
         "type": "github"
       },
       "original": {
@@ -158,17 +158,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1792225015,
-        "narHash": "sha256-yDOQP3d+Bmqng14aaXSKdZ25n9fskf5Knuq7Q/PL2sg=",
+        "lastModified": 1795180415,
+        "narHash": "sha256-6vCS1Cs1Vo5oLdAmhaCfadLmMhsYG5rcRXPZDbVwo6Q=",
         "owner": "Nomadcxx",
         "repo": "sysc-greet",
-        "rev": "9c1df9bb1375bfc8251574075fa48ac880b46051",
+        "rev": "7ebd91e57328dbc711a22dbe6f95d650d299b802",
         "type": "github"
       },
       "original": {
         "owner": "Nomadcxx",
         "repo": "sysc-greet",
-        "rev": "9c1df9bb1375bfc8251574075fa48ac880b46051",
         "type": "github"
       }
     },
