@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 let
   config = "~/.config";
 in
@@ -83,7 +83,7 @@ in
       #*Utils
       keepassxc
       krita
-      calibre
+      #calibre
       qpdfview
       thunderbird
       #onlyoffice-desktopediotors
@@ -102,6 +102,8 @@ in
       #ollama
       #code-cursor
       #goose-cli
+      #deadlock-mod-manager
+      inputs.deadlock-mod-manager.packages.${pkgs.system}.nightly
 
     ];
 
