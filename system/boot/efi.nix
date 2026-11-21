@@ -15,4 +15,5 @@
     "ahci"
     "usbhid"
   ];
+  boot.initrd.kernelModules = [ "vfat" "nls_cp437" "nls_iso8859_1" ];
 }
