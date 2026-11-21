@@ -103,7 +103,7 @@ in
       #code-cursor
       #goose-cli
       #deadlock-mod-manager
-      inputs.deadlock-mod-manager.packages.${pkgs.system}.nightly
+      inputs.deadlock-mod-manager.packages.${pkgs.stdenv.hostPlatform.system}.nightly
 
     ];
 

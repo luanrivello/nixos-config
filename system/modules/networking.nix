@@ -1,11 +1,11 @@
-{ hostname, ... }:
+{ hostname, lib, ... }:
 {
   networking = {
     hostName = hostname;
 
     networkmanager = {
       enable = true;
-      dns = "none";
+      dns = lib.mkForce "none";
     };
 
     #ControlD Ads&Track, Quad9

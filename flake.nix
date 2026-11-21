@@ -31,32 +31,10 @@
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs hostname username; };
 
-<<<<<<< Updated upstream
       modules = [
         ./system/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.sysc-greet.nixosModules.default
-=======
-     modules = [
-	./system/configuration.nix
-	inputs.home-manager.nixosModules.default
-
-	{
-	  home-manager.extraSpecialArgs = {
-	    inherit inputs;
-	  };
-	}
-
-	inputs.sysc-greet.nixosModules.default
-
-        #home-manager.nixosModules.home-manager {
-        #  home-manager = {
-        #    useGlobalPkgs = true;
-        #    useUserPackages = true;
-        #    users.${username} = ./home/home-manager.nix;
-        #  };
-        #}
->>>>>>> Stashed changes
       ];
     };
   };

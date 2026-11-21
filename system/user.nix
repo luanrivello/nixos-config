@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, inputs, username, ... }:
 {
   users.users.${username} = {
     isNormalUser = true;
@@ -16,6 +16,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
     users.${username} = ../home/home-manager.nix;
   };
 }
