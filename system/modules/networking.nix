@@ -6,6 +6,7 @@
     networkmanager = {
       enable = true;
       dns = lib.mkForce "none";
+      settings.main.systemd-resolved = false;
     };
 
     #ControlD Ads&Track, Quad9
