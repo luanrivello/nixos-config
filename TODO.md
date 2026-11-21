@@ -23,6 +23,15 @@ graphical.target @4.876s
                       └─systemd-fsck@dev-disk-by\x2duuid-C44A\x2d31FD.service @1.325s +51ms
                         └─dev-disk-by\x2duuid-C44A\x2d31FD.device
 
+ nexus  dareggon  nixos-config  main [⇡ 󱈎 󰱽 ]
+陰⫸ systemd-analyze critical-chain boot.mount
+The time when unit became active or started is printed after the "@" character.
+The time the unit took to start is printed after the "+" character.
+
+boot.mount +27ms
+└─systemd-fsck@dev-disk-by\x2duuid-C44A\x2d31FD.service @1.325s +51ms
+  └─dev-disk-by\x2duuid-C44A\x2d31FD.device
+
  nexus  dareggon  nixos-config  main [ 󱈎 ]
 陰⫸ systemd-analyze blame
 6.588s sys-devices-virtual-dmi-id.device
