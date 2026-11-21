@@ -5,7 +5,7 @@
   echo "## Boot time";        systemd-analyze
   echo "## Critical chain";   systemd-analyze critical-chain
   echo "## Slowest units";    systemd-analyze blame | grep -v '\.device' | head -20
-  echo "## SATA + thermal";   journalctl -b -k -o short-monotonic | grep -E 'ata[1-6]|thermal|_PSL'
+  echo "## SATA + thermal";   journalctl -b -k -o short-monotonic | command grep -E 'ata[1-6]|thermal|_PSL'
   echo "## GPU mask";         cat /sys/module/amdgpu/parameters/ppfeaturemask
   echo "## Kernel params";    cat /proc/cmdline
   echo "## DNS";              resolvectl status
