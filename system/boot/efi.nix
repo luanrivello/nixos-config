@@ -9,6 +9,9 @@
   };
 
   boot.initrd.systemd.enable = true;
+  boot.initrd.systemd.tpm2.enable = false;
+  systemd.tpm2.enable = false;
+
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "nvme"

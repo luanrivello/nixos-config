@@ -1,7 +1,7 @@
 
 { ... }:
 {
-  boot.loader.timeout = 5;
+  boot.loader.timeout = 0;
   boot.kernelParams = [ 
     "loglevel=3" 
     "8250.nr_uarts=0"
